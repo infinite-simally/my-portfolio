@@ -1,0 +1,42 @@
+.main-page-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 1rem;
+}
+
+.canvas-container {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+
+.header-wrapp {
+  position: relative;
+}
+
+.title {
+  margin-left: 3.25rem;
+  font-family: "Italiana", serif;
+  color: var(--headers-color);
+  font-size: 3em;
+}
+
+.horizontal-line,
+.vertical-line {
+  position: absolute;
+}
+
+.horizontal-line {
+  width: 3rem;
+  border-top: 1px solid var(--headers-color);
+  margin-top: 1.95rem;
+  opacity: 0.5;
+}
+
+.vertical-line {
+  height: 12rem;
+  border-right: 1px solid var(--headers-color);
+  margin-top: 2rem;
+  opacity: 0.5;
+}
