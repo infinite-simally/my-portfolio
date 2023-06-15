@@ -19,11 +19,15 @@
 
 .title {
   margin-left: 3.25rem;
-  font-family: "Italiana", serif;
   color: var(--headers-color);
-  font-size: 3em;
+}
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
+/* DECORATIVE LINES */
 .horizontal-line,
 .vertical-line {
   position: absolute;
@@ -32,7 +36,7 @@
 .horizontal-line {
   width: 3rem;
   border-top: 1px solid var(--headers-color);
-  margin-top: 1.95rem;
+  top: 1.95rem;
   opacity: 0.5;
 }
 
