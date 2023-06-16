@@ -1,19 +1,18 @@
-.main-page-container {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  margin-bottom: 1rem;
-}
-
 .canvas-container {
   position: absolute;
-  width: calc(100vw - 50px);
-  height: calc(100vh - 50px);
+  width: calc(100vw - var(--large-padding) * 2);
+  height: calc(100vh - var(--large-padding) * 2);
   margin: 0 auto;
   /* filter: blur(20px); */
 }
 
-.header-wrapp {
+.header-wrap {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo-wrapp {
   position: relative;
 }
 
@@ -21,10 +20,16 @@
   margin-left: 3.25rem;
   color: var(--headers-color);
 }
+
 .nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
+}
+
+.nav-link {
+  padding-right: var(--regular-padding);
+  color: var(--content-color);
 }
 
 /* DECORATIVE LINES */
@@ -43,6 +48,6 @@
 .vertical-line {
   height: 12rem;
   border-right: 1px solid var(--headers-color);
-  margin-top: 2rem;
+  top: 2rem;
   opacity: 0.5;
 }

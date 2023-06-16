@@ -20,6 +20,11 @@
   /*RADIUSES */
   --circle-radius: 50%;
 
+  /* SPACE */
+  --small-padding: 0.75rem;
+  --regular-padding: 1.5rem;
+  --large-padding: 2rem;
+
   --transition: 0.5s;
 }
 
@@ -35,7 +40,7 @@
   width: 100vw;
   height: 100vh;
   background: var(--bg-color);
-  padding: 25px;
+  padding: var(--large-padding);
 }
 
 /* LIGHT COLOR TOKENS */
