@@ -1,5 +1,5 @@
-import { ReactComponent as DarkThemeIcon } from "../../assets/dark-theme.svg";
-import { ReactComponent as LightThemeIcon } from "../../assets/light-theme.svg";
+import { ReactComponent as DarkThemeIcon } from "../../assets/icons/dark-theme.svg";
+import { ReactComponent as LightThemeIcon } from "../../assets/icons/light-theme.svg";
 
 import { SwitchProps } from "./Switch.types";
 

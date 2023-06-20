@@ -32,22 +32,8 @@
   color: var(--content-color);
 }
 
-/* DECORATIVE LINES */
-.horizontal-line,
-.vertical-line {
+.work-profiles {
   position: absolute;
-}
-
-.horizontal-line {
-  width: 3rem;
-  border-top: 1px solid var(--headers-color);
-  top: 1.95rem;
-  opacity: 0.5;
-}
-
-.vertical-line {
-  height: 12rem;
-  border-right: 1px solid var(--headers-color);
-  top: 2rem;
-  opacity: 0.5;
+  top: 14.5rem;
+  left: -1.25rem;
 }

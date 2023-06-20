@@ -1,20 +1,18 @@
 import { Props } from "./DecorativeLine.type";
 
 const DecorativeLine = ({
-  size = "1px",
   color,
-  lineStyle = "solid",
   linePosition,
-  width,
+  height,
   opacity = 0.5,
   rotate,
 }: Props) => {
   const style = {
-    // position: "absolute",
+    position: "absolute",
     transform: `rotate(${rotate || 0})`,
-    // borderTop: `${size} ${lineStyle} ${color}`,
+    border: `0.5px solid ${color}`,
     opacity,
-    width,
+    height,
     ...linePosition,
   } as React.CSSProperties;
 

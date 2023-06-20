@@ -1,19 +1,28 @@
 import { useContext } from "react";
-import Switch from "../../components /Switch/Switch";
-import "./MainPage.css";
 import { ThemeContext } from "../../context/ThemeContext/ThemeProvider";
+
+import Switch from "../../components /Switch/Switch";
 import Text from "../../components /Text/Text";
 import Link from "../../components /Link/Link";
 import DecorativeLine from "../../components /DecorativeLine/DecorativeLine";
+
+import { ReactComponent as LinkedinIcon } from "../../assets/icons/linkedin.svg";
+import { ReactComponent as GithubIcon } from "../../assets/icons/github.svg";
+
+import "./MainPage.css";
+import colors from "../../styles/color-variables.module.scss";
 // import ThreeContainer from "../../components /ThreeContainer/ThreeContainer";
 // import Sphere from "../../components /Sphere/Sphere";
 
 const MainPage = () => {
   const { isDarkTheme, toggleTheme } = useContext(ThemeContext);
+  const decorLineColor = isDarkTheme
+    ? colors.lightHeadersColor
+    : colors.darkHeadersColor;
 
   const navLinks = ["About", "Contact Me"].map((link) => (
     <Link className='nav-link' href=''>
-      <Text type='h3' fontSize={20} textTransform='uppercase' fontWeight={200}>
+      <Text tag='h3' fontSize={20} textTransform='uppercase' fontWeight={200}>
         {link}
       </Text>
     </Link>
@@ -30,24 +39,28 @@ const MainPage = () => {
     <div className='main-page-container'>
       <div className='header-wrap'>
         <div className='logo-wrapp'>
-          {/* Desorative lines */}
           <DecorativeLine
-            color='red'
-            width='3.25rem'
-            rotate='90deg'
+            color={decorLineColor}
+            height='12rem'
             linePosition={{ top: "2rem" }}
           />
-          <div className='vertical-line' />
-          <div className='horizontal-line' />
+          <DecorativeLine
+            rotate='90deg'
+            color={decorLineColor}
+            height='3rem'
+            linePosition={{ top: "0.5rem", left: "1.5rem" }}
+          />
 
           <Text
-            type='h1'
+            tag='h1'
             fontSize='3.25rem'
             fontFamily='"Italiana", sans-serif'
             className='title'
           >
             Yana Kortelova
           </Text>
+
+          <LinkedinIcon className='work-profiles' />
         </div>
 
         <div className='nav'>

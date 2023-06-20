@@ -1,5 +1,5 @@
 export type Props = {
-  type: string;
+  tag: string;
   fontSize?: number | string;
   children: string;
   fontFamily?: string;

@@ -1,7 +1,8 @@
+import React from "react";
 import { Props } from "./Text.types";
 
 const Text = ({
-  type,
+  tag,
   fontSize = 16,
   fontFamily = "'Roboto', sans-serif",
   fontWeight = 400,
@@ -23,22 +24,7 @@ const Text = ({
   };
 
   const props = { style, className };
-
-  switch (type) {
-    case "h1":
-      return <h1 {...props}>{children}</h1>;
-    case "h2":
-      return <h2 {...props}>{children}</h2>;
-    case "h3":
-      return <h3 {...props}>{children}</h3>;
-    case "label":
-      return <label {...props}>{children}</label>;
-    case "content":
-      return <span {...props}>{children}</span>;
-    case "p":
-    default:
-      return <p {...props}>{children}</p>;
-  }
+  return React.createElement(tag, { ...props }, children);
 };
 
 export default Text;
