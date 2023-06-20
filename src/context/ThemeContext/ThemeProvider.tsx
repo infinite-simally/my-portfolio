@@ -1,4 +1,4 @@
-import React, { createContext, useState } from "react";
+import { createContext, useState } from "react";
 import useMediaQuery from "../../hooks/useMediaQuery";
 import { getLocalStorageValue } from "../../utils/getLocalStorageValue";
 import { ThemeProps, storageKey } from "./ThemeProvider.types";
