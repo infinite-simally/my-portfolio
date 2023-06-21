@@ -1,4 +1,4 @@
-import { Props } from "./DecorativeLine.type";
+import { Props } from "./DecorativeLine.types";
 
 const DecorativeLine = ({
   color,
