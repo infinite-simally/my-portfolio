@@ -1,0 +1,22 @@
+.Container {
+    position: relative;
+}
+
+.NameLogo {
+    margin-left: 3.25rem;
+    color: var(--headers-color);
+}
+
+.InIcon,
+.GhIcon {
+    position: absolute;
+    left: -1.25rem;
+}
+
+.InIcon {
+    top: 14.5rem;
+}
+
+.GhIcon {
+    top: 20rem;
+}
