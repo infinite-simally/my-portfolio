@@ -1,7 +1,7 @@
 export type Props = {
   tag: string;
   fontSize?: number | string;
-  children: string;
+  children: string | React.ReactNode;
   fontFamily?: string;
   fontWeight?: number;
   lineHeight?: string;

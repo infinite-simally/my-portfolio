@@ -4,21 +4,17 @@ import Text from "../../../../components /Text/Text";
 import { ReactComponent as LinkedinIcon } from "../../../../assets/icons/linkedin.svg";
 import { ReactComponent as GithubIcon } from "../../../../assets/icons/github.svg";
 
-import { Props } from "./Heder.types";
-
 import colors from "../../../../styles/color-variables.module.scss";
 import styles from "./Header.module.scss";
 
-const Header = ({ isDarkTheme }: Props) => {
-  const decorLineColor = isDarkTheme
-    ? colors.lightHeadersColor
-    : colors.darkHeadersColor;
+const Header = () => {
+  const decorLineColor = colors.decorLinesColor;
 
   return (
     <div className={styles.Container}>
       <DecorativeLine
         color={decorLineColor}
-        height='12rem'
+        height='8rem'
         linePosition={{ top: "2rem" }}
       />
       <DecorativeLine
@@ -38,6 +34,11 @@ const Header = ({ isDarkTheme }: Props) => {
       </Text>
 
       <LinkedinIcon className={styles.InIcon} />
+      <DecorativeLine
+        color={decorLineColor}
+        height='2rem'
+        linePosition={{ top: "13.5rem" }}
+      />
       <GithubIcon className={styles.GhIcon} />
     </div>
   );

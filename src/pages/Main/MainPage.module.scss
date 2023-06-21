@@ -1,24 +1,29 @@
-.canvas-container {
+.Container {
+  position: relative;
+}
+
+.CanvasContainer {
   position: absolute;
   width: calc(100vw - var(--large-padding) * 2);
   height: calc(100vh - var(--large-padding) * 2);
   margin: 0 auto;
-  /* filter: blur(20px); */
+  filter: blur(20px);
 }
 
-.header-wrap {
+.HeaderWrap {
+  position: relative;
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
 
-.nav {
+.Nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 
-.nav-link {
+.NavLink {
   padding-right: var(--regular-padding);
   color: var(--content-color);
 }

@@ -25,7 +25,7 @@
   --regular-padding: 1.5rem;
   --large-padding: 2rem;
 
-  --transition: 0.5s;
+  --transition: 0.4s;
 }
 
 * {
@@ -49,6 +49,7 @@
   --bg-strong-color: var(--gray-70-color);
   --surface-bg-color: var(--gray-20-color);
   --headers-color: var(--gray-70-color);
+  --decor-lines-color: var(--gray-60-color);
   --content-color: var(--gray-60-color);
   --content-strong-color: var(--gray-10-color);
   --sphere-primary-color: var(--blue-10-color);
@@ -61,6 +62,7 @@
   --bg-strong-color: var(--gray-30-color);
   --surface-bg-color: var(--gray-90-color);
   --headers-color: var(--gray-30-color);
+  --decor-lines-color: var(--gray-40-color);
   --content-color: var(--gray-50-color);
   --content-strong-color: var(--gray-100-color);
   --sphere-primary-color: var(--blue-20-color);

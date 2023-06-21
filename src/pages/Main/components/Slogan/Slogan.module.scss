@@ -1,0 +1,17 @@
+.Container {
+    position: relative;
+    z-index: 2;
+    margin-left: 50vw;
+    margin-top: 5rem;
+    width: fit-content;
+    color: var(--headers-color);
+}
+
+.Row {
+    display: flex;
+    align-items: center;
+
+    &___marginRight {
+        margin-right: 0.75rem;
+    }
+}

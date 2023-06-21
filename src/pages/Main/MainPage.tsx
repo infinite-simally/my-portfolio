@@ -4,18 +4,19 @@ import { ThemeContext } from "../../context/ThemeContext/ThemeProvider";
 import Switch from "../../components /Switch/Switch";
 import Text from "../../components /Text/Text";
 import Link from "../../components /Link/Link";
-
-import "./MainPage.css";
 import Header from "./components/Header/Header";
 
-// import ThreeContainer from "../../components /ThreeContainer/ThreeContainer";
-// import Sphere from "../../components /Sphere/Sphere";
+import styles from "./MainPage.module.scss";
+import Slogan from "./components/Slogan/Slogan";
+
+import ThreeContainer from "../../components /ThreeContainer/ThreeContainer";
+import Sphere from "../../components /Sphere/Sphere";
 
 const MainPage = () => {
   const { isDarkTheme, toggleTheme } = useContext(ThemeContext);
 
   const navLinks = ["About", "Contact Me"].map((link) => (
-    <Link className='nav-link' href=''>
+    <Link className={styles.NavLink} href=''>
       <Text tag='h3' fontSize={20} textTransform='uppercase' fontWeight={200}>
         {link}
       </Text>
@@ -23,21 +24,21 @@ const MainPage = () => {
   ));
 
   return (
-    // <div style={{ position: "relative" }}>
-    //   <ThreeContainer className='canvas-container'>
-    //     <pointLight position={[10, 10, 10]} castShadow />
-    //     <ambientLight castShadow />
-    //     <directionalLight castShadow />
-    //     <Spheres position={[1, 0, 0]} wireframe={true} />
-    //   </ThreeContainer>
-    <div className='main-page-container'>
-      <div className='header-wrap'>
-        <Header isDarkTheme />
-        <div className='nav'>
+    <div className={styles.Container}>
+      <ThreeContainer className={styles.CanvasContainer}>
+        <pointLight position={[10, 10, 10]} castShadow />
+        <ambientLight castShadow />
+        <directionalLight castShadow />
+        <Sphere position={[1, 0, 0]} />
+      </ThreeContainer>
+      <div className={styles.HeaderWrap}>
+        <Header />
+        <div className={styles.Nav}>
           {navLinks}
           <Switch isDarkTheme={isDarkTheme} toggleTheme={toggleTheme} />
         </div>
       </div>
+      <Slogan />
     </div>
   );
 };

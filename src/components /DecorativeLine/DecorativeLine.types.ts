@@ -9,7 +9,7 @@ type LinePosition = CSSPositionOffsets;
 
 export type Props = {
   size?: string;
-  color: string;
+  color?: string;
   height: string;
   lineStyle?: "solid";
   linePosition?: LinePosition;

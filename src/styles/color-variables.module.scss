@@ -1,23 +1,13 @@
 // Export color variables to use in JS
 
 :export {
-  // LIGHT COLOR TOKRNS
-  $lightBgColor: var(--gray-10-color);
-  $lightBgStrongColor: var(--gray-70-color);
-  $lightSurfaceBgColor: var(--gray-20-color);
-  $lightHeadersColor: var(--gray-70-color);
-  $lightContentColor: var(--gray-60-color);
-  $lightContentStrongColor: var(--gray-10-color);
-  $lightSpherePrimaryColor: var(--blue-10-color);
-  $lightSphereSecondaryColor: var(--purple-20-color);
-
-  // DARK COLOR TOKENS
-  $darkBgColor: var(--gray-100-color);
-  $darkBgStrongColor: var(--gray-30-color);
-  $darkSurfaceBgColor: var(--gray-90-color);
-  $darkHeadersColor: var(--gray-30-color);
-  $darkContentColor: var(--gray-50-color);
-  $darkContentStrongColor: var(--gray-100-color);
-  $darkSpherePrimaryColor: var(--blue-20-color);
-  $darkSphereSecondaryColor: var(--purple-30-color);
+  bgColor: var(--bg-color);
+  bgStrongColor: var(--bg-strong-color);
+  surfaceBgColor: var(--surface-bg-color);
+  headersColor: var(--headers-color);
+  decorLinesColor: var(--decor-lines-color);
+  contentColor: var(--content-color);
+  contentStrongColor: var(--content-strong-color);
+  spherePrimaryColor: var(--sphere-primary-color);
+  sphereSecondaryColor: var(--sphere-secondary-color);
 }
