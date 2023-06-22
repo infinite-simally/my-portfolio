@@ -28,7 +28,7 @@ const Sphere = (props: any) => {
     <>
       <mesh ref={ref}>
         <sphereGeometry args={[3, 32, 32]} />
-        <meshStandardMaterial color='#b585c5' />
+        <meshStandardMaterial color='#6063a3' />
       </mesh>
       <mesh
         ref={sphere2ref}
@@ -38,7 +38,7 @@ const Sphere = (props: any) => {
         // onPointerOut={(event) => hover(false)}
       >
         <sphereGeometry args={[3, 32, 32]} />
-        <meshStandardMaterial color='#7376c3' />
+        <meshStandardMaterial color='#b27ec2' />
       </mesh>
     </>
   );

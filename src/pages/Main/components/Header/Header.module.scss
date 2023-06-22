@@ -5,6 +5,7 @@
 .NameLogo {
     margin-left: 3.25rem;
     color: var(--headers-color);
+    text-shadow: 0 2px 4px var(--shadow-color);
 }
 
 .InIcon,
@@ -28,4 +29,6 @@
 .GhIcon:hover {
     cursor: pointer;
     transform: scale(1.3);
+    box-shadow: 0 0 4px var(--shadow-color);
+    border-radius: 50%;
 }

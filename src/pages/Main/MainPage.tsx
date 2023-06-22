@@ -10,7 +10,7 @@ import styles from "./MainPage.module.scss";
 import Slogan from "./components/Slogan/Slogan";
 
 import ThreeContainer from "../../components /ThreeContainer/ThreeContainer";
-import Sphere from "../../components /Sphere/Sphere";
+import Sphere from "./components/Spheres/Spheres";
 
 const MainPage = () => {
   const { isDarkTheme, toggleTheme } = useContext(ThemeContext);
@@ -27,9 +27,9 @@ const MainPage = () => {
     <div className={styles.Container}>
       <ThreeContainer className={styles.CanvasContainer}>
         <pointLight position={[10, 10, 10]} castShadow />
-        <ambientLight castShadow />
-        <directionalLight castShadow />
-        <Sphere position={[1, 0, 0]} />
+        <ambientLight intensity={0.1} />
+        <directionalLight position={[0.5, 0.5, 1]} color='#505050' />
+        <Sphere position={[0, 0, 0]} />
       </ThreeContainer>
       <div className={styles.HeaderWrap}>
         <Header />

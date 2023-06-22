@@ -1,13 +1,22 @@
+@import '../../styles/responsive.scss';
+
+$xl-desktop: get-breakpoint('xl-desktop');
+
 .Container {
   position: relative;
+  padding: 2rem;
+  overflow: hidden;
+  border-radius: 4px;
+  height: calc(100vh - var(--large-padding)* 2);
 }
 
 .CanvasContainer {
   position: absolute;
   width: calc(100vw - var(--large-padding) * 2);
   height: calc(100vh - var(--large-padding) * 2);
+  // max-width: 1536px;
   margin: 0 auto;
-  filter: blur(20px);
+  filter: blur(100px);
 }
 
 .HeaderWrap {

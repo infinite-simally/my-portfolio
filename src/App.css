@@ -41,6 +41,7 @@
   height: 100vh;
   background: var(--bg-color);
   padding: var(--large-padding);
+  overflow: hidden;
 }
 
 /* LIGHT COLOR TOKENS */
@@ -52,6 +53,7 @@
   --decor-lines-color: var(--gray-60-color);
   --content-color: var(--gray-60-color);
   --content-strong-color: var(--gray-10-color);
+  --shadow-color: var(--gray-40-color);
   --sphere-primary-color: var(--blue-10-color);
   --sphere-secondary-color: var(--purple-20-color);
 }
@@ -65,11 +67,12 @@
   --decor-lines-color: var(--gray-40-color);
   --content-color: var(--gray-50-color);
   --content-strong-color: var(--gray-100-color);
+  --shadow-color: var(--gray-80-color);
   --sphere-primary-color: var(--blue-20-color);
   --sphere-secondary-color: var(--purple-30-color);
 }
 
 .App {
-  max-width: 1680px;
+  max-width: 1536px;
   margin: 0 auto;
 }
