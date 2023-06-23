@@ -20,8 +20,8 @@ const Header = () => {
       <DecorativeLine
         rotate='90deg'
         color={decorLineColor}
-        height='3rem'
-        linePosition={{ top: "0.5rem", left: "1.5rem" }}
+        height='2.5rem'
+        linePosition={{ top: "0.75rem", left: "1.25rem" }}
       />
 
       <Text

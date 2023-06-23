@@ -12,7 +12,7 @@ const Slogan = () => {
 
   const uniqueWord = (className?: string) => (
     <Text
-      className={className}
+      className={`${className} ${styles.UniqueWord}`}
       {...commonStyle}
       fontFamily='"Italiana", sans-serif'
     >

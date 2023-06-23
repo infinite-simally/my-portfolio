@@ -2,11 +2,17 @@
 
 $xl-desktop: get-breakpoint('xl-desktop');
 
+.Wrapper {
+  height: calc(100vh - 8px);
+  overflow: hidden;
+  border-radius: var(--small-border-radius);
+  margin: 4px;
+  // padding-left: var(--small-padding);
+}
+
 .Container {
   position: relative;
-  padding: 2rem;
-  overflow: hidden;
-  border-radius: 4px;
+  padding: var(--large-padding);
   height: calc(100vh - var(--large-padding)* 2);
 }
 
@@ -14,7 +20,6 @@ $xl-desktop: get-breakpoint('xl-desktop');
   position: absolute;
   width: calc(100vw - var(--large-padding) * 2);
   height: calc(100vh - var(--large-padding) * 2);
-  // max-width: 1536px;
   margin: 0 auto;
   filter: blur(100px);
 }

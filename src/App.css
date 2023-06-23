@@ -19,6 +19,9 @@
 
   /*RADIUSES */
   --circle-radius: 50%;
+  --small-border-radius: 4px;
+  --medium-border-radius: 8px;
+  --large-border-radius: 12px;
 
   /* SPACE */
   --small-padding: 0.75rem;
@@ -40,7 +43,6 @@
   width: 100vw;
   height: 100vh;
   background: var(--bg-color);
-  padding: var(--large-padding);
   overflow: hidden;
 }
 
