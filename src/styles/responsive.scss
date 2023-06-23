@@ -1,0 +1,95 @@
+// Responsive breakpoints
+
+$breakpoints: (
+    'mobile': 320px,
+    'tablet': 768px,
+    'desktop': 1024px,
+    'xl-desktop': 1280px,
+);
+
+// Get a breakpoint
+//  $breakpoint {string} - the name of the breakpoint
+//  returns the pixel value of the base breakpoint
+
+// https://itnext.io/advanced-use-of-sass-maps-bd5a47ca0d1a
+@function get-breakpoint($breakpoint) {
+    @if map-has-key($breakpoints, $breakpoint) {
+        @return map-get($breakpoints, $breakpoint);
+    }
+
+    @else {
+        @error "Property #{$breakpoint} is not a valid breakpoint";
+    }
+}
+
+
+@mixin screen-smaller-than($max-width) {
+    @media screen and (max-width: $max-width) {
+        @content;
+    }
+}
+
+@mixin screen-greater-than($min-width) {
+    @media screen and (min-width: $min-width) {
+        @content;
+    }
+}
+
+@mixin screen-between($min-width, $max-width) {
+    @media screen and (min-width: ($min-width + 1px)) and (max-width: ($max-width - 1px)) {
+        @content;
+    }
+}
+
+// Repond only to mobile devices smaller than the mobile breakpoint
+// [0, 320px]
+@mixin mobile() {
+    $mobile: get-breakpoint('mobile');
+
+    @include screen-smaller-than($mobile) {
+        @content;
+    }
+}
+
+/* Usage Example:
+    .myClass {
+        @include mobile {
+            display: none;
+        }
+    }
+*/
+
+// (320px, 768px)
+@mixin tablet() {
+    $mobile: get-breakpoint('mobile');
+    $tablet: get-breakpoint('tablet');
+
+    @include screen-between($mobile, $tablet + 1px) {
+        @content;
+    }
+}
+
+/* Usage Example:
+    .myClass {
+        @include tablet {
+            display: none;
+        }
+    }
+*/
+
+// (768px, inf)
+@mixin desktop() {
+    $tablet: get-breakpoint('tablet');
+
+    @include screen-greater-than($tablet + 1px) {
+        @content;
+    }
+}
+
+/* Usage Example:
+    .myClass {
+        @include desktop {
+            display: none;
+        }
+    }
+*/

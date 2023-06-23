@@ -3,16 +3,16 @@ import { ReactComponent as LightThemeIcon } from "../../assets/icons/light-theme
 
 import { SwitchProps } from "./Switch.types";
 
-import "./Switch.css";
+import styles from "./Switch.module.scss";
 
 const Switch = ({ isDarkTheme, toggleTheme }: SwitchProps): JSX.Element => {
   console.log(isDarkTheme);
   return (
-    <label className='gui-switch'>
+    <label className={styles.Switch}>
       {isDarkTheme ? (
-        <DarkThemeIcon className='theme-icon-dark' />
+        <DarkThemeIcon className={styles.DarkThemeIcon} />
       ) : (
-        <LightThemeIcon className='theme-icon-light' />
+        <LightThemeIcon className={styles.LightThemeIcon} />
       )}
       <input
         checked={!isDarkTheme}
