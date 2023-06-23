@@ -16,10 +16,13 @@ import Location from "./components/Location/Location";
 const MainPage = () => {
   const { isDarkTheme, toggleTheme } = useContext(ThemeContext);
 
-  const navLinks = ["About", "Contact Me"].map((link) => (
-    <Link className={styles.NavLink} href=''>
-      <Text tag='h3' fontSize={20} textTransform='uppercase' fontWeight={200}>
-        {link}
+  const navLinks = [
+    { title: "About", href: "" },
+    { title: "Contact Me", href: "" },
+  ].map(({ href, title }) => (
+    <Link className={styles.NavLink} href={href}>
+      <Text tag='h5' className={styles.LinkName}>
+        {title}
       </Text>
     </Link>
   ));

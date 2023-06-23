@@ -41,3 +41,13 @@ $xl-desktop: get-breakpoint('xl-desktop');
   padding-right: var(--regular-padding);
   color: var(--content-color);
 }
+
+.LinkName {
+  text-transform: uppercase;
+  font-weight: 200;
+
+  &:hover {
+    transform: scale(1.075);
+    text-decoration: underline dotted var(--sphere-secondary-color);
+  }
+}

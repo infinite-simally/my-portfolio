@@ -8,12 +8,7 @@ const Location = () => {
   return (
     <div className={styles.Container}>
       <LocationIcon />
-      <Text
-        className={styles.LocationName}
-        fontSize='1.5rem'
-        tag='h3'
-        textTransform='uppercase'
-      >
+      <Text className={styles.LocationName} tag='h4'>
         Calgary, AB
       </Text>
     </div>

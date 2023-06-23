@@ -1,26 +1,15 @@
 import Text from "../../../../components /Text/Text";
 
 import styles from "./Slogan.module.scss";
-import { Props as TextProps } from "../../../../components /Text/Text.types";
 
 const Slogan = () => {
-  const commonStyle = {
-    tag: "h2",
-    fontSize: "3rem",
-    textTransform: "uppercase",
-  } as TextProps;
-
   const uniqueWord = (className?: string) => (
-    <Text
-      className={`${className} ${styles.UniqueWord}`}
-      {...commonStyle}
-      fontFamily='"Italiana", sans-serif'
-    >
+    <Text tag='h2' className={`${className} ${styles.UniqueWord}`}>
       Unique
     </Text>
   );
   const restText = (text: string, className?: string) => (
-    <Text {...commonStyle} fontWeight={900} className={className}>
+    <Text tag='h2' className={`${className} ${styles.ReastText}`}>
       {text}
     </Text>
   );

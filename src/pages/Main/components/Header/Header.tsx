@@ -6,6 +6,7 @@ import { ReactComponent as GithubIcon } from "../../../../assets/icons/github.sv
 
 import colors from "../../../../styles/color-variables.module.scss";
 import styles from "./Header.module.scss";
+import Link from "../../../../components /Link/Link";
 
 const Header = () => {
   const decorLineColor = colors.decorLinesColor;
@@ -24,22 +25,27 @@ const Header = () => {
         linePosition={{ top: "0.75rem", left: "1.25rem" }}
       />
 
-      <Text
-        tag='h1'
-        fontSize='3.25rem'
-        fontFamily='"Italiana", sans-serif'
-        className={styles.NameLogo}
-      >
+      <Text tag='h1' className={styles.NameLogo}>
         Yana Kortelova
       </Text>
 
-      <LinkedinIcon className={styles.InIcon} />
+      <Link
+        className={styles.InIcon}
+        href='https://www.linkedin.com/in/yana-kortelova/'
+      >
+        <LinkedinIcon />
+      </Link>
       <DecorativeLine
         color={decorLineColor}
         height='2rem'
         linePosition={{ top: "13.5rem" }}
       />
-      <GithubIcon className={styles.GhIcon} />
+      <Link
+        className={styles.GhIcon}
+        href='https://github.com/infinite-simally'
+      >
+        <GithubIcon />
+      </Link>
     </div>
   );
 };
