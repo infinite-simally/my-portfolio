@@ -15,11 +15,11 @@ const Sphere = (props: any) => {
   useFrame((state, delta) => {
     const time = state.clock.getElapsedTime();
 
-    ref.current.position.x = Math.sin(time) * 4;
-    ref.current.position.y = Math.cos(time) * 2 + delta;
+    ref.current.position.x = Math.sin(time) * 5;
+    ref.current.position.y = Math.tan(time);
     ref.current.rotation.x += 0.01;
 
-    sphere2ref.current.position.x = Math.sin(time) * 2 + delta;
+    sphere2ref.current.position.x = Math.tan(time);
     sphere2ref.current.position.y = Math.cos(time) * 4;
     sphere2ref.current.rotation.x += 0.01;
   });
@@ -27,7 +27,7 @@ const Sphere = (props: any) => {
   return (
     <>
       <mesh ref={ref}>
-        <sphereGeometry args={[3, 32, 32]} />
+        <sphereGeometry args={[2.5, 32, 32]} />
         <meshStandardMaterial color='#6063a3' />
       </mesh>
       <mesh
@@ -37,7 +37,7 @@ const Sphere = (props: any) => {
         // onPointerOver={(event) => hover(true)}
         // onPointerOut={(event) => hover(false)}
       >
-        <sphereGeometry args={[3, 32, 32]} />
+        <sphereGeometry args={[2.5, 32, 32]} />
         <meshStandardMaterial color='#b27ec2' />
       </mesh>
     </>

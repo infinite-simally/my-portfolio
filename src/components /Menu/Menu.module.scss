@@ -1,0 +1,29 @@
+.Container {
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+
+}
+
+.Menu {
+    position: absolute;
+    display: none;
+    z-index: 10;
+    background-color: var(--surface-bg-color);
+    padding: var(--regular-padding);
+    right: 5px;
+    width: max-content;
+    border-radius: var(--small-border-radius);
+    // box-shadow: 0 2px 2px var(--shadow-color);
+
+    &___open {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+}
+
+.Trigger {
+    display: inline-block;
+    color: var(--headers-color);
+}

@@ -1,0 +1,75 @@
+@import '../../../../../styles/responsive.scss';
+
+$width: 20px;
+
+.Container {
+    perspective: 500px;
+    display: grid;
+}
+
+.Banner {
+    display: flex;
+}
+
+.Panel {
+    position: relative;
+    width: $width;
+    font-family: 'Italiana', sans-serif;
+    text-transform: uppercase;
+    height: 3.25rem;
+    overflow: hidden;
+
+    &___hovered {
+        cursor: pointer;
+        color: hsl(var(--hue), 50%, 70%);
+        animation: rotate 3s var(--delay) infinite ease-in-out alternate;
+    }
+
+
+    @include tablet {
+        height: 2.75rem;
+    }
+
+    @include mobile {
+        height: 2rem;
+    }
+}
+
+@keyframes rotate {
+
+    0%,
+    10% {
+        transform: rotateX(0deg);
+    }
+
+    90%,
+    100% {
+        transform: rotateX(360deg);
+    }
+}
+
+.Panel::before {
+    position: absolute;
+    left: var(--left);
+    content: 'Unique';
+    font-size: 2.75rem;
+    width: max-content;
+    // color: hsl(var(--hue), 50%, 50%);
+
+    @include tablet {
+        font-size: 2.25rem;
+    }
+
+    @include mobile {
+        font-size: 1.5rem;
+    }
+}
+
+
+@for $i from 0 to 8 {
+    .Panel:nth-child(#{$i + 1}) {
+        --left: #{$width * $i * -1};
+        --hue: #{8 * $i + 280};
+        --delay: #{$i * 0.1s};
+    }
+}

@@ -1,9 +1,22 @@
+@import '.././../../../styles/responsive.scss';
+
 .Wrapper {
     display: flex;
     justify-content: flex-end;
     width: 100%;
-    margin-top: 7rem;
-    padding-right: 15%;
+    margin-top: 10vh;
+    padding-right: 18%;
+
+    @include tablet {
+        justify-content: center;
+        padding-right: 0;
+    }
+
+    @include mobile {
+        justify-content: center;
+        padding-right: 0;
+        padding-left: 15%;
+    }
 }
 
 .Container {
@@ -24,15 +37,41 @@
 
 .UniqueWord,
 .ReastText {
-    font-size: 3rem;
+    color: var(--headers-color);
     text-transform: uppercase;
+    letter-spacing: 2px;
+    line-height: 2.2rem;
+
+    @include tablet {
+        font-size: 2rem;
+    }
+
+    @include mobile {
+        font-size: 1.5rem;
+    }
 }
 
 .UniqueWord {
-    text-shadow: 0 2px 10px var(--bg-color);
+    // text-shadow: 0 2px 10px var(--bg-color);
     font-family: "Italiana", sans-serif;
 }
 
 .ReastText {
     font-weight: 900;
+}
+
+.TagLine {
+    color: var(--helper-text-color);
+    margin-top: 2.25rem;
+    letter-spacing: 1.8px;
+
+    @include tablet {
+        font-size: 0.85rem;
+        letter-spacing: 1.5px;
+    }
+
+    @include mobile {
+        font-size: 0.5rem;
+        letter-spacing: 1.5px;
+    }
 }

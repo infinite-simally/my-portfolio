@@ -6,7 +6,6 @@ import { SwitchProps } from "./Switch.types";
 import styles from "./Switch.module.scss";
 
 const Switch = ({ isDarkTheme, toggleTheme }: SwitchProps): JSX.Element => {
-  console.log(isDarkTheme);
   return (
     <label className={styles.Switch}>
       {isDarkTheme ? (

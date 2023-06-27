@@ -7,8 +7,8 @@ import styles from "./Location.module.scss";
 const Location = () => {
   return (
     <div className={styles.Container}>
-      <LocationIcon />
-      <Text className={styles.LocationName} tag='h4'>
+      <LocationIcon className={styles.LocationIcon} />
+      <Text className={styles.LocationName} tag='h5'>
         Calgary, AB
       </Text>
     </div>
