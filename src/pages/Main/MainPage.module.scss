@@ -4,7 +4,7 @@ $xl-desktop: get-breakpoint('xl-desktop');
 
 .Wrapper {
   height: calc(100vh - 8px);
-  overflow: hidden;
+  overflow-x: hidden;
   border-radius: var(--small-border-radius);
   margin: 4px;
   // padding-left: var(--small-padding);
@@ -16,38 +16,9 @@ $xl-desktop: get-breakpoint('xl-desktop');
   height: calc(100vh - var(--large-padding)* 2);
 }
 
-.CanvasContainer {
-  position: absolute;
-  width: calc(100vw - var(--large-padding) * 2);
-  height: calc(100vh - var(--large-padding) * 2);
-  margin: 0 auto;
-  filter: blur(100px);
-}
-
 .HeaderWrap {
   position: relative;
   display: flex;
   align-items: center;
   justify-content: space-between;
-}
-
-.Nav {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.NavLink {
-  padding-right: var(--regular-padding);
-  color: var(--content-color);
-}
-
-.LinkName {
-  text-transform: uppercase;
-  font-weight: 200;
-
-  &:hover {
-    transform: scale(1.075);
-    text-decoration: underline dotted var(--sphere-secondary-color);
-  }
 }

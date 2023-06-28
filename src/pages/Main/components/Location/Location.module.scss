@@ -1,3 +1,9 @@
+@keyframes rotate {
+    to {
+        transform: rotateY(-360deg);
+    }
+}
+
 .Container {
     width: 100%;
     display: flex;
@@ -5,12 +11,15 @@
     justify-content: center;
     position: absolute;
     bottom: 0;
+    right: 0;
 
     &:hover {
         cursor: pointer;
         transform: scale(1.1);
+        // animation: scrollText 24s infinite linear;
     }
 }
+
 
 .LocationName {
     margin-left: var(--small-padding);

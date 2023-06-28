@@ -1,0 +1,33 @@
+@import '../../../../styles/responsive.scss';
+
+$tablet: get-breakpoint('tablet');
+
+.Nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.NavLink {
+    padding-right: var(--large-padding);
+    color: var(--content-color);
+
+    @include screen-smaller-than($tablet) {
+        padding-right: 0;
+        margin-bottom: 1rem;
+    }
+}
+
+.LinkName {
+    text-transform: uppercase;
+    font-weight: 200;
+
+    &:hover {
+        transform: scale(1.075);
+        text-decoration: underline dotted var(--sphere-secondary-color);
+
+        @include screen-smaller-than($tablet) {
+            text-decoration: none;
+        }
+    }
+}

@@ -49,6 +49,14 @@
   }
 }
 
+.Label {
+  margin-right: 8px;
+}
+
+.IconsContainer {
+  position: relative;
+}
+
 .LightThemeIcon,
 .DarkThemeIcon {
   position: absolute;
@@ -56,7 +64,7 @@
 }
 
 .DarkThemeIcon {
-  right: 2px;
+  left: 1.5rem;
 }
 
 .LightThemeIcon {

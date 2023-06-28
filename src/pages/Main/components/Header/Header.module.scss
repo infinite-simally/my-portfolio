@@ -14,10 +14,16 @@
     position: absolute;
     left: -1.25rem;
 
-    &>svg {
+    & svg {
         color: var(--decor-lines-color);
         width: 40px;
         height: 40px;
+
+        &:hover {
+            cursor: pointer;
+            transform: scale(1.2);
+            border-radius: 50%;
+        }
     }
 }
 
@@ -26,12 +32,12 @@
 }
 
 .GhIcon {
-    top: 16rem;
+    top: 18rem;
 }
 
-.InIcon:hover,
-.GhIcon:hover {
-    cursor: pointer;
-    transform: scale(1.2);
-    border-radius: 50%;
-}
+// .InIcon:hover,
+// .GhIcon:hover {
+//     cursor: pointer;
+//     transform: scale(1.2);
+//     border-radius: 50%;
+// }
