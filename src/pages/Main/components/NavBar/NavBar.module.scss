@@ -14,7 +14,7 @@ $tablet: get-breakpoint('tablet');
 
     @include screen-smaller-than($tablet) {
         padding-right: 0;
-        margin: 10px 0;
+        margin-bottom: 1rem;
     }
 }
 
@@ -25,13 +25,9 @@ $tablet: get-breakpoint('tablet');
     &:hover {
         transform: scale(1.075);
         text-decoration: underline dotted var(--sphere-secondary-color);
-    }
-}
 
-.SwitchContainer {
-    display: flex;
-
-    &>p {
-        padding-right: var(--small-padding);
+        @include screen-smaller-than($tablet) {
+            text-decoration: none;
+        }
     }
 }

@@ -34,20 +34,15 @@ const NavBar = ({ currentWidth, isDarkTheme, toggleTheme }: Props) => {
   const onTriggerClick = () => setMenuOpen(!isMenuOpen);
   const onMenuClose = () => setMenuOpen(false);
 
-  const themeSwitch = (
-    <Switch isDarkTheme={isDarkTheme} toggleTheme={toggleTheme} />
-  );
-
-  const content = [...navLinks, themeSwitch];
-
-  const mobileContent = [
+  const content = [
     ...navLinks,
-    <div className={clsx(styles.NavLink, styles.SwitchContainer)}>
-      <Text tag='p' className={styles.LinkName}>
-        Theme
-      </Text>{" "}
-      {themeSwitch}
-    </div>,
+    <Switch
+      label={isDesktop ? "" : "theme"}
+      labelClassName={styles.LinkName}
+      className={styles.NavLink}
+      isDarkTheme={isDarkTheme}
+      toggleTheme={toggleTheme}
+    />,
   ];
 
   return (
@@ -60,7 +55,7 @@ const NavBar = ({ currentWidth, isDarkTheme, toggleTheme }: Props) => {
           onClose={onMenuClose}
           triggerElem={<MenuIcon onClick={onTriggerClick} />}
         >
-          {mobileContent}
+          {content}
         </Menu>
       )}
     </div>
