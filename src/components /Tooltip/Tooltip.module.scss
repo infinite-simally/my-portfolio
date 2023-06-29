@@ -1,6 +1,18 @@
 $arrow-side-length: 0.75rem;
 $arrow-gap: $arrow-side-length / 2;
 
+
+.Container {
+    position: relative;
+
+    &:hover {
+        .Tooltip {
+            display: flex;
+        }
+    }
+}
+
+
 .Tooltip {
     position: absolute;
     display: none;
@@ -12,115 +24,18 @@ $arrow-gap: $arrow-side-length / 2;
     font-size: 12px;
     padding: 5px;
     border-radius: var(--small-border-radius);
-    box-shadow: 0 2px 0 green;
+    box-shadow: 0 2px 0 var(--tooltip-color);
 
     &::after {
         content: " ";
         position: absolute;
         border-width: $arrow-gap;
         border-style: solid;
-        border-color: green transparent transparent transparent;
-    }
-
-    &[data-placement*='bottom'] {
-        left: -110%;
-        margin-top: $arrow-side-length;
-        box-shadow: 0 -2px 0 green;
-
-        &::after {
-            top: -$arrow-side-length;
-            left: 50%;
-            margin-left: -$arrow-gap;
-            border-color: transparent transparent green transparent;
-        }
-    }
-
-    &[data-placement*='bottomRight'] {
-        left: 75%;
-
-        &::after {
-            left: $arrow-side-length;
-        }
-    }
-
-    &[data-placement*='bottomLeft'] {
-        right: 75%;
-
-        &::after {
-            right: $arrow-gap;
-            left: auto;
-        }
-    }
-
-    &[data-placement*='left'] {
-        top: 25%;
-        right: 100%;
-        margin-right: $arrow-side-length;
-        box-shadow: 2px 0 0 -0.5px green;
-
-        &::after {
-            top: 50%;
-            right: -$arrow-side-length;
-            width: 0;
-            height: 0;
-            margin-top: -$arrow-gap;
-            border-color: transparent transparent transparent green;
-        }
-    }
-
-    &[data-placement*='leftTop'] {
-        top: 0;
-
-        &::after {
-            top: $arrow-gap;
-        }
-    }
-
-    &[data-placement*='leftBottom'] {
-        top: auto;
-        bottom: 0;
-
-        &::after {
-            top: auto;
-            bottom: 0;
-        }
-    }
-
-
-    &[data-placement*='right'] {
-        top: 25%;
-        left: 100%;
-        margin-left: $arrow-side-length;
-        box-shadow: -2px 0 0 -0.5px green;
-
-        &::after {
-            top: 50%;
-            left: -$arrow-side-length;
-            margin-top: -$arrow-gap;
-            border-color: transparent green transparent transparent;
-        }
-    }
-
-    &[data-placement*='rightTop'] {
-        top: 0;
-
-        &::after {
-            top: auto;
-            bottom: 0;
-        }
-    }
-
-    &[data-placement*='rightBottom'] {
-        top: auto;
-        bottom: 0;
-
-        &::after {
-            top: $arrow-gap;
-        }
-
+        border-color: transparent;
     }
 
     &[data-placement*='top'] {
+        right: -110%;
         bottom: 100%;
         margin-bottom: $arrow-side-length;
 
@@ -128,34 +43,50 @@ $arrow-gap: $arrow-side-length / 2;
             top: 100%;
             left: 50%;
             margin-left: -$arrow-gap;
+            border-top-color: var(--tooltip-color);
         }
     }
 
-    &[data-placement*='topRight'] {
-        left: 75%;
+    &[data-placement*='right'] {
+        top: 25%;
+        left: 100%;
+        margin-left: $arrow-side-length;
+        box-shadow: -2.5px 0 0 -0.5px var(--tooltip-color);
 
         &::after {
-            left: $arrow-side-length;
+            top: 50%;
+            left: -$arrow-side-length;
+            margin-top: -$arrow-gap;
+            border-right-color: var(--tooltip-color);
         }
     }
 
-    &[data-placement*='topLeft'] {
-        right: 75%;
+    &[data-placement*='bottom'] {
+        left: -110%;
+        margin-top: $arrow-side-length;
+        box-shadow: 0 -2px 0 var(--tooltip-color);
 
         &::after {
-            right: $arrow-gap;
-            left: auto;
+            top: -$arrow-side-length;
+            left: 50%;
+            margin-left: -$arrow-gap;
+            border-bottom-color: var(--tooltip-color);
         }
     }
 
-}
+    &[data-placement*='left'] {
+        top: 25%;
+        right: 100%;
+        margin-right: $arrow-side-length;
+        box-shadow: 2px 0 0 -0.5px var(--tooltip-color);
 
-.Container {
-    position: relative;
-
-    &:hover {
-        .Tooltip {
-            display: flex;
+        &::after {
+            top: 50%;
+            right: -$arrow-side-length;
+            width: 0;
+            height: 0;
+            margin-top: -$arrow-gap;
+            border-left-color: var(--tooltip-color);
         }
     }
 }
