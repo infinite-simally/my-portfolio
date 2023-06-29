@@ -1,6 +1,6 @@
 @import '../../styles/responsive.scss';
 
-$xl-desktop: get-breakpoint('xl-desktop');
+$l-desktop: get-breakpoint('l-desktop');
 
 .Wrapper {
   height: calc(100vh - 8px);

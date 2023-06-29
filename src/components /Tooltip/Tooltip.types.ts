@@ -1,16 +1,4 @@
-type Variant =
-  | "top"
-  | "topLeft"
-  | "topRight"
-  | "right"
-  | "rightTop"
-  | "rightBottom"
-  | "bottom"
-  | "bottomLeft"
-  | "bottomRight"
-  | "left"
-  | "leftTop"
-  | "leftBottom";
+type Variant = "top" | "right" | "bottom" | "left";
 
 export type Props = {
   children: React.ReactNode;
