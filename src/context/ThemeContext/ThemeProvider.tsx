@@ -1,5 +1,7 @@
 import { createContext, useState } from "react";
+
 import useMediaQuery from "../../hooks/useMediaQuery";
+
 import { getLocalStorageValue } from "../../utils/getLocalStorageValue";
 import { ThemeProps, storageKey } from "./ThemeProvider.types";
 import { setLocalStorageValue } from "../../utils/setLocalStorageValue";
@@ -23,14 +25,16 @@ const ThemeProvider = ({ children }: ThemeProps): JSX.Element | null => {
   const toggleTheme = (): void => {
     setIsDarkTheme(!isDarkTheme);
     setLocalStorageValue(storageKey, (!isDarkTheme).toString());
+
+    document.body.classList.remove(isDarkTheme ? "dark" : "light");
   };
 
+  document.body.classList.add(isDarkTheme ? "dark" : "light");
+
   return (
-    <div className={isDarkTheme ? "dark" : "light"}>
-      <ThemeContext.Provider value={{ isDarkTheme, toggleTheme }}>
-        {children}
-      </ThemeContext.Provider>
-    </div>
+    <ThemeContext.Provider value={{ isDarkTheme, toggleTheme }}>
+      {children}
+    </ThemeContext.Provider>
   );
 };
 

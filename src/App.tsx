@@ -1,10 +1,14 @@
 import "./App.scss";
-import MainPage from "./pages/Main/MainPage";
+
+// PAGES
+import AboutPage from "./pages/About";
+import MainPage from "./pages/Main";
 
 function App() {
   return (
     <div className='App'>
       <MainPage />
+      <AboutPage />
     </div>
   );
 }
