@@ -44,10 +44,7 @@ $xl-desktop: get-breakpoint('xl-desktop');
 
 .dark,
 .light {
-  width: 100vw;
-  height: 100vh;
   background: var(--bg-color);
-  overflow: hidden;
 }
 
 /* LIGHT COLOR TOKENS */
@@ -85,4 +82,5 @@ $xl-desktop: get-breakpoint('xl-desktop');
 .App {
   max-width: $xl-desktop;
   margin: 0 auto;
+  overflow: hidden;
 }
