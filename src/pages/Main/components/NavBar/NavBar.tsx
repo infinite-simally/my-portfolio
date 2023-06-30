@@ -10,7 +10,6 @@ import { ReactComponent as MenuIcon } from "../../../../assets/icons/menu.svg";
 
 import { breakpoints } from "../../../../constants/responsive";
 
-import { clsx } from "clsx";
 import styles from "./NavBar.module.scss";
 
 const navLinks = [

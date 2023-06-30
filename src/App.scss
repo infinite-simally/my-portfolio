@@ -1,3 +1,7 @@
+@import './styles/responsive.scss';
+
+$xl-desktop: get-breakpoint('xl-desktop');
+
 :root {
   /* COLORS */
   --white-color: #ffffff;
@@ -79,6 +83,6 @@
 }
 
 .App {
-  max-width: 1536px;
+  max-width: $xl-desktop;
   margin: 0 auto;
 }
