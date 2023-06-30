@@ -1,6 +1,6 @@
 import { Props } from "./Link.types";
 
-import "./Link.css";
+import "./Link.scss";
 
 const Link = ({ children, href, className }: Props) => {
   return (
