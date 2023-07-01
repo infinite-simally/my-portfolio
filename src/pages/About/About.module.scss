@@ -1,5 +1,17 @@
+@import '../../styles/utils.scss';
+
 .Container {
-    width: 100vw;
+    position: relative;
     height: 100vh;
     color: white;
+}
+
+.Portrait {
+    position: absolute;
+    top: 25%;
+    right: 5%;
+    width: 25%;
+    background-color: var(--surface-bg-color);
+    border-radius: 50%;
+    box-shadow: 0 0 0 20px rgba(var(--surface-bg-rgb-color), 0.5);
 }
