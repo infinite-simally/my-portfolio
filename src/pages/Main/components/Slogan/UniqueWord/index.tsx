@@ -1,8 +1,8 @@
 import { useState } from "react";
 
-import useWindowDimensions from "../../../../../hooks/useWindowDimension";
+import useWindowDimensions from "hooks/useWindowDimension";
 
-import { breakpoints } from "../../../../../constants/responsive";
+import { breakpoints } from "constants/responsive";
 
 import { clsx } from "clsx";
 import styles from "./UniqueWord.module.scss";

@@ -1,4 +1,4 @@
-import ThreeContainer from "../../../../components /ThreeContainer";
+import ThreeContainer from "components/ThreeContainer";
 import Sphere from "./Spheres/Spheres";
 
 import styles from "./MainAnimation.module.scss";

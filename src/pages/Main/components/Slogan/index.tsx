@@ -1,4 +1,4 @@
-import Text from "../../../../components /Text";
+import Text from "components/Text";
 import UniqueWord from "./UniqueWord";
 
 import styles from "./Slogan.module.scss";

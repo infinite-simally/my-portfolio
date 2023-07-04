@@ -1,10 +1,10 @@
-import PageContainer from "../../components /PageContainer ";
-import DecorativeLine from "../../components /DecorativeLine";
-import Section from "./components/Section/Section";
+import PageContainer from "components/PageContainer ";
+import DecorativeLine from "components/DecorativeLine";
+import Section from "./components/Section";
 
-import YanaImg from "../../assets/images/yana.png";
+import YanaImg from "assets/images/yana.png";
 
-import { ReactComponent as EducationIcon } from "../../assets/icons/education.svg";
+import { ReactComponent as EducationIcon } from "assets/icons/education.svg";
 
 import styles from "./About.module.scss";
 
