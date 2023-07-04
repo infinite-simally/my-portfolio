@@ -1,4 +1,4 @@
-import Text from "../Text/Text";
+import Text from "../Text";
 
 import { ReactComponent as DarkThemeIcon } from "../../assets/icons/dark-theme.svg";
 import { ReactComponent as LightThemeIcon } from "../../assets/icons/light-theme.svg";

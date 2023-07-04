@@ -1,9 +1,9 @@
-import Text from "../../../../components /Text/Text";
+import Text from "../../../../components /Text";
 
 import { ReactComponent as LocationIcon } from "../../../../assets/icons/location.svg";
 
 import styles from "./Location.module.scss";
-import Link from "../../../../components /Link/Link";
+import Link from "../../../../components /Link";
 
 const Location = () => {
   return (

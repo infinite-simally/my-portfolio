@@ -3,16 +3,9 @@
 $l-desktop: get-breakpoint('l-desktop');
 
 .Wrapper {
-  height: calc(100vh - 8px);
-  overflow-x: hidden;
+  overflow: hidden;
   border-radius: var(--small-border-radius);
   margin: 4px;
-}
-
-.Container {
-  position: relative;
-  padding: var(--large-padding);
-  height: calc(100vh - var(--large-padding)* 2);
 }
 
 .HeaderWrap {
