@@ -1,8 +1,8 @@
-import "./App.scss";
+import "App.scss";
 
 // PAGES
-import AboutPage from "./pages/About";
-import MainPage from "./pages/Main";
+import AboutPage from "pages/About";
+import MainPage from "pages/Main";
 
 function App() {
   return (

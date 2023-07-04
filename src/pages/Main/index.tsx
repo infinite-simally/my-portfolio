@@ -1,5 +1,5 @@
 import { useContext } from "react";
-import { ThemeContext } from "../../context/ThemeContext/ThemeProvider";
+import { ThemeContext } from "context/ThemeContext/ThemeProvider";
 
 import Header from "./components/Header";
 import Slogan from "./components/Slogan";
@@ -8,8 +8,9 @@ import MainAnimation from "./components/MainAnimation";
 
 import styles from "./MainPage.module.scss";
 import NavBar from "./components/NavBar";
-import useWindowDimensions from "../../hooks/useWindowDimension";
-import PageContainer from "../../components /PageContainer ";
+
+import useWindowDimensions from "hooks/useWindowDimension";
+import PageContainer from "components/PageContainer ";
 
 const MainPage = () => {
   const { isDarkTheme, toggleTheme } = useContext(ThemeContext);

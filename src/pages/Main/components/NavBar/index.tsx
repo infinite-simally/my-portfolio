@@ -2,13 +2,13 @@ import { useState } from "react";
 
 import { Props } from "./NavBar.types";
 
-import Link from "../../../../components /Link";
-import Text from "../../../../components /Text";
-import Switch from "../../../../components /Switch";
-import Menu from "../../../../components /Menu";
-import { ReactComponent as MenuIcon } from "../../../../assets/icons/menu.svg";
+import Link from "components/Link";
+import Text from "components/Text";
+import Switch from "components/Switch";
+import Menu from "components/Menu";
+import { ReactComponent as MenuIcon } from "assets/icons/menu.svg";
 
-import { breakpoints } from "../../../../constants/responsive";
+import { breakpoints } from "constants/responsive";
 
 import styles from "./NavBar.module.scss";
 
