@@ -1,14 +1,15 @@
 import { useContext } from "react";
 import { ThemeContext } from "../../context/ThemeContext/ThemeProvider";
 
-import Header from "./components/Header/Header";
-import Slogan from "./components/Slogan/Slogan";
-import Location from "./components/Location/Location";
-import MainAnimation from "./components/MainAnimation/MainAnimation";
+import Header from "./components/Header";
+import Slogan from "./components/Slogan";
+import Location from "./components/Location";
+import MainAnimation from "./components/MainAnimation";
 
 import styles from "./MainPage.module.scss";
-import NavBar from "./components/NavBar/NavBar";
+import NavBar from "./components/NavBar";
 import useWindowDimensions from "../../hooks/useWindowDimension";
+import PageContainer from "../../components /PageContainer ";
 
 const MainPage = () => {
   const { isDarkTheme, toggleTheme } = useContext(ThemeContext);
@@ -16,7 +17,7 @@ const MainPage = () => {
 
   return (
     <div className={styles.Wrapper}>
-      <div className={styles.Container}>
+      <PageContainer>
         <MainAnimation />
 
         <div className={styles.HeaderWrap}>
@@ -30,7 +31,7 @@ const MainPage = () => {
 
         <Slogan />
         <Location />
-      </div>
+      </PageContainer>
     </div>
   );
 };

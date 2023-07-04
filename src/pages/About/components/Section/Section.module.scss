@@ -1,0 +1,21 @@
+.Container {
+    position: relative;
+    width: fit-content;
+}
+
+.Header {
+    display: flex;
+    width: fit-content;
+    align-items: center;
+
+    &>svg {
+        color: var(--headers-color)
+    }
+}
+
+.Title {
+    font-family: 'Italiana', sans-serif;
+    font-size: 2rem;
+    margin-left: 0.5rem;
+    color: var(--headers-color);
+}

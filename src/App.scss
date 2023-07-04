@@ -1,4 +1,5 @@
 @import './styles/responsive.scss';
+@import './styles//utils.scss';
 
 $xl-desktop: get-breakpoint('xl-desktop');
 
@@ -20,6 +21,12 @@ $xl-desktop: get-breakpoint('xl-desktop');
   --purple-10-color: #e1b2f0;
   --purple-20-color: #ebacff;
   --purple-30-color: #b585c5;
+
+  /* RGB COLOR */
+  --gray-20-rgb-color: 239, 239, 239;
+  --gray-40-rgb-color: 170, 170, 170;
+  --gray-80-rgb-color: 74, 74, 74;
+  --gray-90-rgb-color: 24, 24, 24;
 
   /*RADIUSES */
   --circle-radius: 50%;
@@ -52,12 +59,13 @@ $xl-desktop: get-breakpoint('xl-desktop');
   --bg-color: var(--gray-10-color);
   --bg-strong-color: var(--gray-70-color);
   --surface-bg-color: var(--gray-20-color);
+  --surface-bg-rgb-color: var(--gray-20-rgb-color);
   --headers-color: var(--gray-70-color);
   --decor-lines-color: var(--gray-60-color);
   --content-color: var(--gray-60-color);
   --content-strong-color: var(--gray-10-color);
   --helper-text-color: var(--gray-50-color);
-  --shadow-color: var(--gray-40-color);
+  --shadow-color: var(--gray-40-rgb-color);
   --sphere-primary-color: var(--blue-10-color);
   --sphere-secondary-color: var(--purple-20-color);
   --tooltip-color: var(--blue-10-color);
@@ -68,12 +76,13 @@ $xl-desktop: get-breakpoint('xl-desktop');
   --bg-color: var(--gray-100-color);
   --bg-strong-color: var(--gray-30-color);
   --surface-bg-color: var(--gray-90-color);
+  --surface-bg-rgb-color: var(--gray-90-rgb-color);
   --headers-color: var(--gray-30-color);
   --decor-lines-color: var(--gray-40-color);
   --content-color: var(--gray-50-color);
   --content-strong-color: var(--gray-100-color);
   --helper-text-color: var(--gray-50-color);
-  --shadow-color: var(--gray-80-color);
+  --shadow-color: var(--gray-80-rgb-color);
   --sphere-primary-color: var(--blue-20-color);
   --sphere-secondary-color: var(--purple-30-color);
   --tooltip-color: var(--blue-20-color);
