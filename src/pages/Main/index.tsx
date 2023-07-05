@@ -8,6 +8,7 @@ import MainAnimation from "./components/MainAnimation";
 
 import styles from "./MainPage.module.scss";
 import NavBar from "./components/NavBar";
+
 import useWindowDimensions from "hooks/useWindowDimension";
 import PageContainer from "components/PageContainer ";
 
