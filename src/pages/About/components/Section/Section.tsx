@@ -1,4 +1,4 @@
-import Text from "../../../../components /Text";
+import Text from "components/Text";
 import styles from "./Section.module.scss";
 
 const Section = ({ line, icon, title, description }: any) => {
