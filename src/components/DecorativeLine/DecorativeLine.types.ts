@@ -15,4 +15,5 @@ export type Props = {
   linePosition?: LinePosition;
   opacity?: number;
   rotate?: string;
+  position?: string;
 };

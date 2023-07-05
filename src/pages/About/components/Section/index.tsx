@@ -1,9 +1,16 @@
 import Text from "components/Text";
 import styles from "./Section.module.scss";
 
-const Section = ({ line, icon, title, description }: any) => {
+const Section = ({
+  line,
+  icon,
+  title,
+  topLineSize,
+  description,
+  style,
+}: any) => {
   return (
-    <div>
+    <div style={{ position: "absolute", ...style }}>
       <div className={styles.Container}>
         <div className={styles.Header}>
           {icon}{" "}
@@ -11,10 +18,11 @@ const Section = ({ line, icon, title, description }: any) => {
             {title}
           </Text>
         </div>
-        <div>
+        <hr className={styles.Line} style={{ width: topLineSize }} />
+        <div className={styles.Description}>
           <Text tag='p'>{description}</Text>
         </div>
-        {line}
+        {/* {line} */}
       </div>
     </div>
   );

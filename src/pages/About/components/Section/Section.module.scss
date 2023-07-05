@@ -19,3 +19,30 @@
     margin-left: 0.5rem;
     color: var(--headers-color);
 }
+
+.Description {
+    display: flex;
+    justify-content: center;
+
+}
+
+.Line {
+    width: 24rem;
+    color: var(--decor-lines-color);
+    text-align: "end";
+    opacity: 0.5;
+    height: 0.5px;
+
+    &::after {
+        content: '';
+        position: absolute;
+        top: 6.75rem;
+        left: -1.5rem;
+        display: block;
+        width: 10rem;
+        border: 0.5px solid var(--decor-lines-color);
+        transform: rotate(45deg);
+        opacity: 0.5;
+    }
+
+}

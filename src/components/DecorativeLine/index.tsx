@@ -6,11 +6,13 @@ const DecorativeLine = ({
   height,
   opacity = 0.5,
   rotate,
+  position = "absolute",
 }: Props) => {
   const style = {
-    position: "absolute",
     transform: `rotate(${rotate || 0})`,
     border: `0.5px solid ${color}`,
+    width: 0,
+    position,
     opacity,
     height,
     ...linePosition,
