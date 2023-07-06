@@ -5,14 +5,14 @@
     width: 100%;
     height: 100%;
     justify-content: flex-end;
-    align-items: center;
+    align-items: end;
+    flex-direction: column;
     position: relative;
 }
 
 .Content {
-    background-size: contain;
-    width: 350px;
-    height: 350px;
+    width: 30rem;
+    height: 30rem;
     background-color: var(--surface-bg-color);
     border-radius: 50%;
     box-shadow: 0 0 0 1.25rem rgba(var(--surface-bg-rgb-color), 0.5);
@@ -22,4 +22,16 @@
 
 .Portrait {
     width: 100%;
+}
+
+.SocialMedia {
+    display: flex;
+    justify-content: center;
+    width: 30rem;
+    padding: 1rem;
+    margin-top: 1.75rem;
+
+    &>p {
+        font-family: 'Italiana', sans-serif;
+    }
 }

@@ -1,5 +1,5 @@
 import PageContainer from "components/PageContainer ";
-import DecorativeLine from "components/DecorativeLine";
+import Text from "components/Text";
 import Section from "./components/Section";
 
 import YanaImg from "assets/images/yana.png";
@@ -14,43 +14,56 @@ const AboutPage = () => {
       <div className={styles.Container}>
         <div className={styles.Content}>
           <img className={styles.Portrait} src={YanaImg} alt='Yana Kortelova' />
+
           <Section
             title='Education'
-            description='National Technical University of Ukraine'
-            style={{ top: "-7rem", right: "2rem" }}
-            line={
-              <>
-                <DecorativeLine
-                  height='12rem'
-                  rotate='-45deg'
-                  linePosition={{ left: "3.5rem", top: "1.25rem" }}
-                />
-              </>
+            description={
+              <div
+                style={{
+                  display: "flex",
+                  flexDirection: "column",
+                  alignItems: "center",
+                  marginTop: "15px",
+                }}
+              >
+                <Text>National Technical University of Ukraine</Text>
+
+                <Text style={{ fontWeight: 200, fontSize: "0.85rem" }}>
+                  Bachelor degreee, Computer Science
+                </Text>
+              </div>
             }
+            style={{ top: "-9rem", right: "3.5rem" }}
+            topLineSize='25rem'
+            icon={<EducationIcon />}
+          />
+
+          <Section
+            title='Career'
+            description={
+              <div
+                style={{
+                  display: "flex",
+                  flexDirection: "column",
+                  alignItems: "center",
+                  marginTop: "15px",
+                }}
+              >
+                <Text>National Technical University of Ukraine</Text>
+
+                <Text style={{ fontWeight: 200, fontSize: "0.85rem" }}>
+                  Bachelor degreee, Computer Science
+                </Text>
+              </div>
+            }
+            style={{ top: "-9rem", left: "-53rem" }}
+            topLineSize='48rem'
             icon={<EducationIcon />}
           />
         </div>
-
-        {/* <Section
-          title='Career'
-          description='Lorem Ipsum'
-          style={{ top: "3.25rem", left: "15rem" }}
-          line={
-            <>
-              <DecorativeLine
-                height='25rem'
-                rotate='-90deg'
-                linePosition={{ top: "-9.5rem", right: "0" }}
-              />
-              <DecorativeLine
-                height='16rem'
-                rotate='-45deg'
-                linePosition={{ left: "-3rem", top: "1rem" }}
-              />
-            </>
-          }
-          icon={<EducationIcon />}
-        /> */}
+        <div className={styles.SocialMedia}>
+          <Text>Follow for more: INSTAGRAM</Text>
+        </div>
       </div>
     </PageContainer>
   );
