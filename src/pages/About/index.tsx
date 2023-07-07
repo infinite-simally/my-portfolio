@@ -5,6 +5,9 @@ import Section from "./components/Section";
 import YanaImg from "assets/images/yana.png";
 
 import { ReactComponent as EducationIcon } from "assets/icons/education.svg";
+import { ReactComponent as InfoIcon } from "assets/icons/info.svg";
+import { ReactComponent as InstagramIcon } from "assets/icons/instagram.svg";
+import { ReactComponent as CareerIcon } from "assets/icons/work.svg";
 
 import styles from "./About.module.scss";
 
@@ -31,7 +34,7 @@ const AboutPage = () => {
                 </Text>
               </div>
             }
-            icon={<EducationIcon />}
+            icon={<CareerIcon />}
           />
 
           <Section
@@ -42,7 +45,7 @@ const AboutPage = () => {
                   display: "flex",
                   flexDirection: "column",
                   alignItems: "center",
-                  marginTop: "15px",
+                  marginTop: "10px",
                 }}
               >
                 <Text>National Technical University of Ukraine</Text>
@@ -73,10 +76,16 @@ const AboutPage = () => {
                 </Text>
               </div>
             }
-            icon={<EducationIcon />}
+            icon={<InfoIcon />}
           />
 
-          <img className={styles.Portrait} src={YanaImg} alt='Yana Kortelova' />
+          <div className={styles.PortraitContainer}>
+            <img
+              className={styles.Portrait}
+              src={YanaImg}
+              alt='Yana Kortelova'
+            />
+          </div>
 
           <Section
             title='Hobbie'
@@ -100,7 +109,8 @@ const AboutPage = () => {
           />
 
           <div className={styles.SocialMedia}>
-            <Text>Follow for more: INSTAGRAM</Text>
+            <Text>Follow for more:</Text>
+            <InstagramIcon />
           </div>
         </div>
       </div>

@@ -1,11 +1,22 @@
 .Container {
     position: relative;
+    margin-right: 3rem;
+}
+
+.Container.Education {
+    margin-left: 3rem;
+    margin-right: 0;
+
+    .Header {
+        margin-left: -2rem;
+    }
 }
 
 .Header {
     display: flex;
     width: fit-content;
     align-items: center;
+    min-height: 50px;
 
     &>svg {
         color: var(--headers-color)
@@ -20,33 +31,57 @@
 }
 
 .Line {
-    width: 85%;
+    position: absolute;
+    width: 100%;
+    height: 100%;
     opacity: 0.25;
-    border: 0.25px solid var(--decor-lines-color);
+    border-top: 0.5px solid var(--decor-lines-color);
+    border-right: 0.5px solid var(--decor-lines-color);
+    border-left: 0;
 
-    &::after {
-        content: '';
-        position: absolute;
-        display: block;
-        border: 0.5px solid var(--decor-lines-color);
-    }
+    transform: skewX(30deg);
+
+    // &::after {
+    //     content: '';
+    //     position: absolute;
+    //     display: block;
+    //     border: 0.5px solid var(--decor-lines-color);
+    // }
 
 }
 
 .Education.Line {
-    &::after {
-        bottom: 0;
-        left: -2.5rem;
-        width: 9.85rem;
-        transform: rotate(60deg);
-    }
+    border-left: 0.25px solid var(--decor-lines-color);
+    border-right: 0;
+    // &::after {
+    //     bottom: 0;
+    //     left: -2.5rem;
+    //     width: 9.85rem;
+    //     transform: rotate(60deg);
+    // }
 }
 
 .Career.Line {
-    &::after {
-        top: 10.25rem;
-        right: -5.25rem;
-        width: 16.5rem;
-        transform: rotate(60deg);
-    }
+    width: 105%;
+    height: 180%;
+    // &::after {
+    //     top: 10.25rem;
+    //     right: -5.25rem;
+    //     width: 16.5rem;
+    //     transform: rotate(60deg);
+    // }
+}
+
+.Hobbie.Line {
+    height: 200%;
+    border-top: 0;
+    border-bottom: 0.5px solid var(--decor-lines-color);
+    transform: skewX(-45deg);
+    bottom: calc(100% - 3rem);
+}
+
+.About.Line {
+    // width: 110%;
+    height: 50%;
+    transform: skewX(45deg);
 }

@@ -12,10 +12,12 @@
     display: grid;
     grid-template-columns: 2fr 1fr;
     grid-template-rows: 1fr 2fr 1fr;
+    overflow: hidden;
 }
 
 .Portrait {
     position: relative;
+    z-index: 2;
     width: 100%;
     background-color: var(--surface-bg-color);
     border-radius: 50%;
@@ -25,11 +27,15 @@
 .SocialMedia {
     display: flex;
     justify-content: center;
+    align-items: center;
     width: 30rem;
     padding: 1rem;
     margin-top: 1.75rem;
 
+    color: var(--content-color);
+
     &>p {
         font-family: 'Italiana', sans-serif;
+        font-size: 1.25rem;
     }
 }

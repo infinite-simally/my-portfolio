@@ -6,19 +6,17 @@ type Props = {
   icon: React.ReactNode;
   title: string;
   description: React.ReactNode;
-  className?: string;
 };
-const Section = ({ icon, title, description, className }: Props) => {
+const Section = ({ icon, title, description }: Props) => {
   return (
-    <div className={clsx(className, styles.Container)}>
+    <div className={clsx(styles.Container, styles[title])}>
       <div className={styles.Header}>
         {icon}
         <Text className={styles.Title} tag='h6'>
           {title}
         </Text>
       </div>
-
-      <hr className={clsx(styles[title], styles.Line)} />
+      <div className={clsx(styles[title], styles.Line)}></div>
       <div className={styles.Description}>{description}</div>
     </div>
   );
