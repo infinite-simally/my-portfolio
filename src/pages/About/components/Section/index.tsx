@@ -1,18 +1,16 @@
 import Text from "components/Text";
 import styles from "./Section.module.scss";
-import { CSSProperties } from "react";
 import clsx from "clsx";
 
 type Props = {
   icon: React.ReactNode;
   title: string;
-  topLineSize: string;
   description: React.ReactNode;
-  style: CSSProperties;
+  className?: string;
 };
-const Section = ({ icon, title, topLineSize, description, style }: Props) => {
+const Section = ({ icon, title, description, className }: Props) => {
   return (
-    <div style={{ position: "absolute", ...style }}>
+    <div className={clsx(className, styles.Container)}>
       <div className={styles.Header}>
         {icon}
         <Text className={styles.Title} tag='h6'>
@@ -20,10 +18,7 @@ const Section = ({ icon, title, topLineSize, description, style }: Props) => {
         </Text>
       </div>
 
-      <hr
-        className={clsx(styles[title], styles.Line)}
-        style={{ width: topLineSize }}
-      />
+      <hr className={clsx(styles[title], styles.Line)} />
       <div className={styles.Description}>{description}</div>
     </div>
   );

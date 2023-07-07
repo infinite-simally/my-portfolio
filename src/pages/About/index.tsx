@@ -13,7 +13,26 @@ const AboutPage = () => {
     <PageContainer>
       <div className={styles.Container}>
         <div className={styles.Content}>
-          <img className={styles.Portrait} src={YanaImg} alt='Yana Kortelova' />
+          <Section
+            title='Career'
+            description={
+              <div
+                style={{
+                  display: "flex",
+                  flexDirection: "column",
+                  alignItems: "center",
+                  marginTop: "15px",
+                }}
+              >
+                <Text>National Technical University of Ukraine</Text>
+
+                <Text style={{ fontWeight: 200, fontSize: "0.85rem" }}>
+                  Bachelor degreee, Computer Science
+                </Text>
+              </div>
+            }
+            icon={<EducationIcon />}
+          />
 
           <Section
             title='Education'
@@ -33,13 +52,11 @@ const AboutPage = () => {
                 </Text>
               </div>
             }
-            style={{ top: "-9rem", right: "3.5rem" }}
-            topLineSize='25rem'
             icon={<EducationIcon />}
           />
 
           <Section
-            title='Career'
+            title='About'
             description={
               <div
                 style={{
@@ -56,13 +73,35 @@ const AboutPage = () => {
                 </Text>
               </div>
             }
-            style={{ top: "-9rem", left: "-53rem" }}
-            topLineSize='48rem'
             icon={<EducationIcon />}
           />
-        </div>
-        <div className={styles.SocialMedia}>
-          <Text>Follow for more: INSTAGRAM</Text>
+
+          <img className={styles.Portrait} src={YanaImg} alt='Yana Kortelova' />
+
+          <Section
+            title='Hobbie'
+            description={
+              <div
+                style={{
+                  display: "flex",
+                  flexDirection: "column",
+                  alignItems: "center",
+                  marginTop: "15px",
+                }}
+              >
+                <Text>National Technical University of Ukraine</Text>
+
+                <Text style={{ fontWeight: 200, fontSize: "0.85rem" }}>
+                  Bachelor degreee, Computer Science
+                </Text>
+              </div>
+            }
+            icon={<EducationIcon />}
+          />
+
+          <div className={styles.SocialMedia}>
+            <Text>Follow for more: INSTAGRAM</Text>
+          </div>
         </div>
       </div>
     </PageContainer>

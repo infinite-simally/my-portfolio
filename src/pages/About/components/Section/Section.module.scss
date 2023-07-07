@@ -1,3 +1,7 @@
+.Container {
+    position: relative;
+}
+
 .Header {
     display: flex;
     width: fit-content;
@@ -16,6 +20,7 @@
 }
 
 .Line {
+    width: 85%;
     opacity: 0.25;
     border: 0.25px solid var(--decor-lines-color);
 
@@ -30,7 +35,7 @@
 
 .Education.Line {
     &::after {
-        top: 7.5rem;
+        bottom: 0;
         left: -2.5rem;
         width: 9.85rem;
         transform: rotate(60deg);
@@ -39,9 +44,9 @@
 
 .Career.Line {
     &::after {
-        top: 9.75rem;
-        right: -11.25rem;
-        width: 15rem;
+        top: 10.25rem;
+        right: -5.25rem;
+        width: 16.5rem;
         transform: rotate(60deg);
     }
 }
