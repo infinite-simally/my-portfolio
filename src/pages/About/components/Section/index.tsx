@@ -1,21 +1,23 @@
 import Text from "components/Text";
 import styles from "./Section.module.scss";
+import clsx from "clsx";
 
-const Section = ({ line, icon, title, description }: any) => {
+type Props = {
+  icon: React.ReactNode;
+  title: string;
+  description: React.ReactNode;
+};
+const Section = ({ icon, title, description }: Props) => {
   return (
-    <div>
-      <div className={styles.Container}>
-        <div className={styles.Header}>
-          {icon}{" "}
-          <Text className={styles.Title} tag='h6'>
-            {title}
-          </Text>
-        </div>
-        <div>
-          <Text tag='p'>{description}</Text>
-        </div>
-        {line}
+    <div className={clsx(styles.Container, styles[title])}>
+      <div className={styles.Header}>
+        {icon}
+        <Text className={styles.Title} tag='h6'>
+          {title}
+        </Text>
       </div>
+      <div className={clsx(styles[title], styles.Line)}></div>
+      <div className={styles.Description}>{description}</div>
     </div>
   );
 };

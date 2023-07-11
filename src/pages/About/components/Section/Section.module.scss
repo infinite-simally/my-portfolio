@@ -1,12 +1,22 @@
 .Container {
     position: relative;
-    width: fit-content;
+    margin-right: 3rem;
+}
+
+.Container.Education {
+    margin-left: 3rem;
+    margin-right: 0;
+
+    .Header {
+        margin-left: -2rem;
+    }
 }
 
 .Header {
     display: flex;
     width: fit-content;
     align-items: center;
+    min-height: 50px;
 
     &>svg {
         color: var(--headers-color)
@@ -18,4 +28,39 @@
     font-size: 2rem;
     margin-left: 0.5rem;
     color: var(--headers-color);
+}
+
+.Line {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    opacity: 0.25;
+    border-top: 0.5px solid var(--decor-lines-color);
+    border-right: 0.5px solid var(--decor-lines-color);
+    border-left: 0;
+
+    transform: skewX(30deg);
+}
+
+.Education.Line {
+    border-left: 0.25px solid var(--decor-lines-color);
+    border-right: 0;
+}
+
+.Career.Line {
+    width: 105%;
+    height: 180%;
+}
+
+.Hobbie.Line {
+    height: 200%;
+    border-top: 0;
+    border-bottom: 0.5px solid var(--decor-lines-color);
+    transform: skewX(-45deg);
+    bottom: calc(100% - 3rem);
+}
+
+.About.Line {
+    height: 50%;
+    transform: skewX(45deg);
 }
