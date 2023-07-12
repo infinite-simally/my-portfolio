@@ -19,6 +19,6 @@
     //   "components/*": ["components/*"]
     // }
   },
-  "include": ["*.d.ts", "src", "**/*.ts"],
+  "include": ["*.d.ts", "src"],
   "exclude": ["node_modules"]
 }

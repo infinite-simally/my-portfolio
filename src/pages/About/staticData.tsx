@@ -14,7 +14,18 @@ type Sections = {
 export const sectionsData: Sections = {
   career: {
     title: "Career",
-    description: <div>Career</div>,
+    description: (
+      <div style={{ marginTop: "10px" }}>
+        <Text>
+          <b>Frontend Developer:</b> Since August, 2019. Main stack includes
+          (but is not limited to): React, Redux, TypeScript, Jest{" "}
+        </Text>
+        <Text>
+          <b>Designer:</b> Have no commercial experience, but it is my soul
+          passion
+        </Text>
+      </div>
+    ),
     icon: <CareerIcon />,
   },
 
@@ -47,8 +58,8 @@ export const sectionsData: Sections = {
     icon: <InfoIcon />,
   },
 
-  //HOBBIE
-  hobbie: {
+  //HOBBIES
+  hobbies: {
     title: "Hobbie",
     description: <div>Hobby</div>,
     icon: <HobbyIcon />,
