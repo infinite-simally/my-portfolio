@@ -9,6 +9,7 @@ import { ReactComponent as InstagramIcon } from "assets/icons/instagram.svg";
 import { sectionsData } from "./staticData";
 
 import styles from "./About.module.scss";
+import { sectionsData } from "./staticData";
 
 const AboutPage = () => {
   const { career, education, about, hobbies } = sectionsData;
