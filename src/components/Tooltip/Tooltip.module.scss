@@ -1,5 +1,6 @@
 $arrow-side-length: 0.75rem;
-$arrow-gap: clac($arrow-side-length / 2);
+$arrow-gap: calc($arrow-side-length / 2);
+
 
 
 .Container {
@@ -35,7 +36,7 @@ $arrow-gap: clac($arrow-side-length / 2);
     }
 
     &[data-placement*='top'] {
-        right: -110%;
+        right: -100%;
         bottom: 100%;
         margin-bottom: $arrow-side-length;
 
