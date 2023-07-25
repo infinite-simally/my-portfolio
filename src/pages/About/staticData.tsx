@@ -1,5 +1,8 @@
 import { CareerIcon, EducationIcon, HobbyIcon, InfoIcon } from "assets/icons";
+
 import Text from "components/Text";
+
+import styles from "./About.module.scss";
 
 type SectionData = {
   title: string;
@@ -15,7 +18,7 @@ export const sectionsData: Sections = {
   career: {
     title: "Career",
     description: (
-      <div style={{ marginTop: "10px" }}>
+      <>
         <Text>
           <b>Frontend Developer:</b> Since August, 2019. Main stack includes
           (but is not limited to): React, Redux, TypeScript, Jest{" "}
@@ -24,7 +27,7 @@ export const sectionsData: Sections = {
           <b>Designer:</b> Have no commercial experience, but it is my soul
           passion
         </Text>
-      </div>
+      </>
     ),
     icon: <CareerIcon />,
   },

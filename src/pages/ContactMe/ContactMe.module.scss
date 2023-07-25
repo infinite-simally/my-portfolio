@@ -1,0 +1,26 @@
+// whole page content container 
+.Content {
+    display: flex;
+    justify-content: space-between;
+
+}
+
+// Copyright notice, at the bottom of the page
+.cprNotice {
+    position: absolute;
+    bottom: var(--large-padding);
+    right: var(--large-padding);
+    display: flex;
+    align-items: center;
+
+    &>p {
+        font-weight: 300;
+    }
+
+    &___hglWord {
+        margin-left: 0.35rem;
+        margin-bottom: 0.25rem;
+        font-family: 'Italiana', sans-serif;
+        font-size: 1.5rem;
+    }
+}
