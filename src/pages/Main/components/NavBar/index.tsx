@@ -4,8 +4,8 @@ import { Props } from "./NavBar.types";
 
 import Link from "components/Link";
 import Text from "components/Text";
-import Switch from "components/Switch";
-import Menu from "components/Menu";
+import ThemeSwitch from "./components/ThemeSwitch";
+import Menu from "./components/Menu";
 import { ReactComponent as MenuIcon } from "assets/icons/menu.svg";
 
 import { breakpoints } from "constants/responsive";
@@ -35,7 +35,7 @@ const NavBar = ({ currentWidth, isDarkTheme, toggleTheme }: Props) => {
 
   const content = [
     ...navLinks,
-    <Switch
+    <ThemeSwitch
       label={isDesktop ? "" : "theme"}
       labelClassName={styles.LinkName}
       className={styles.NavLink}
