@@ -12,6 +12,7 @@
     }
 }
 
+// TITLE + ICON
 .Header {
     display: flex;
     width: fit-content;
@@ -23,6 +24,7 @@
     }
 }
 
+//SECTION TITLE
 .Title {
     font-family: 'Italiana', sans-serif;
     font-size: 2rem;
@@ -30,6 +32,11 @@
     color: var(--headers-color);
 }
 
+.Description {
+    margin-top: 0.5rem;
+}
+
+// DECORATIVE LINES
 .Line {
     position: absolute;
     width: 100%;

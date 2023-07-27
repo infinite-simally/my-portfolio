@@ -1,14 +1,14 @@
-import Text from "../Text";
+import Text from "components/Text";
 
-import { ReactComponent as DarkThemeIcon } from "../../assets/icons/dark-theme.svg";
-import { ReactComponent as LightThemeIcon } from "../../assets/icons/light-theme.svg";
+import { ReactComponent as DarkThemeIcon } from "assets/icons/dark-theme.svg";
+import { ReactComponent as LightThemeIcon } from "assets/icons/light-theme.svg";
 
 import { SwitchProps } from "./Switch.types";
 
 import styles from "./Switch.module.scss";
 import clsx from "clsx";
 
-const Switch = ({
+const ThemeSwitch = ({
   isDarkTheme,
   toggleTheme,
   label,
@@ -36,4 +36,4 @@ const Switch = ({
   );
 };
 
-export default Switch;
+export default ThemeSwitch;

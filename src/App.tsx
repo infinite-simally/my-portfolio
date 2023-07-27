@@ -2,6 +2,7 @@ import "App.scss";
 
 // PAGES
 import AboutPage from "pages/About";
+import ContactMePage from "pages/ContactMe";
 import MainPage from "pages/Main";
 
 function App() {
@@ -9,6 +10,7 @@ function App() {
     <div className='App'>
       <MainPage />
       <AboutPage />
+      <ContactMePage />
     </div>
   );
 }

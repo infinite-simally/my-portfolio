@@ -2,9 +2,10 @@ import { Props } from "./Header.types";
 
 import { GITHUB, LINKEDIN } from "constants/links";
 
-import DecorativeLine from "components/DecorativeLine";
+import DecorativeLine from "../DecorativeLine";
 import Text from "components/Text";
 import Link from "components/Link";
+import Tooltip from "components/Tooltip";
 
 import { ReactComponent as LinkedinIcon } from "assets/icons/linkedin.svg";
 import { ReactComponent as GithubIcon } from "assets/icons/github.svg";
@@ -13,7 +14,6 @@ import { breakpoints } from "constants/responsive";
 
 import colors from "styles/color-variables.module.scss";
 import styles from "./Header.module.scss";
-import Tooltip from "components/Tooltip";
 
 const Header = ({ currentWidth }: Props) => {
   const isMobile = currentWidth < breakpoints.mobile;
