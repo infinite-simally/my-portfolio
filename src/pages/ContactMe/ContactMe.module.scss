@@ -1,4 +1,9 @@
-// whole page content container 
+.Title {
+    font-family: 'Italiana', sans-serif;
+    color: var(--headers-color);
+}
+
+// content container 
 .Content {
     display: flex;
     justify-content: space-between;
@@ -8,7 +13,7 @@
 // Copyright notice, at the bottom of the page
 .cprNotice {
     position: absolute;
-    bottom: var(--large-padding);
+    bottom: var(--regular-padding);
     right: var(--large-padding);
     display: flex;
     align-items: center;

@@ -1,4 +1,15 @@
 .Form {
     display: flex;
     flex-direction: column;
+    width: 40vw;
+    height: 100%;
+    margin-top: 3rem;
+}
+
+.Input {
+    margin: 0.25rem 0 0.75rem 0;
+    height: 40px;
+    border: 1px solid var(--content-color);
+    border-radius: var(--small-border-radius);
+    background-color: rgba(var(--surface-bg-rgb-color), 0.75);
 }

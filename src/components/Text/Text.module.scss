@@ -6,6 +6,7 @@ $default-font-sizes: (
   'h5': 1.25rem,
   'h6': 1rem,
   'p': 1rem,
+  'label': 1rem,
 );
 
 // BUT: font_size * 1.5 = ideal_line_height (in rems)
@@ -63,4 +64,8 @@ h6 {
 
 p {
   @include Text('p')
+}
+
+label {
+  @include Text('label')
 }

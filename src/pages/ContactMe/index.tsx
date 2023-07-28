@@ -7,6 +7,9 @@ import ContactForm from "./components/ContactFrom";
 const ContactMePage = () => {
   return (
     <PageContainer>
+      <Text tag='h2' className={styles.Title}>
+        CONTACT ME
+      </Text>
       <div className={styles.Content}>
         <ContactForm />
         <div>animation</div>
