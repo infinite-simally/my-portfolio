@@ -1,4 +1,4 @@
-import { useContext, useEffect, useRef } from "react";
+import { useContext } from "react";
 import { ThemeContext } from "context/ThemeContext/ThemeProvider";
 
 import Header from "./components/Header";
