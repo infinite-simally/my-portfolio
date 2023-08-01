@@ -33,19 +33,33 @@ const ContactForm = ({ label, type }: any) => {
       className={styles.Form}
       onSubmit={sendEmail}
     >
-      <label htmlFor='user_name'>Name</label>
-      <input
-        className={styles.Input}
-        required
-        type='text'
-        id='user_name'
-        name='user_name'
-      />
-      <label>Email</label>
-      <input className={styles.Input} type='email' name='user_email' />
-      <label>Message</label>
-      <textarea className={styles.Input} name='message'></textarea>
-      <input className={styles.Input} type='submit' value='Send' />
+      <label className={styles.Label}>
+        Name*
+        <input className={styles.Input} required type='text' name='user_name' />
+      </label>
+      <label className={styles.Label}>
+        Email*
+        <input
+          className={styles.Input}
+          required
+          type='email'
+          name='user_email'
+        />
+      </label>
+      <label className={styles.Label}>
+        Subject
+        <input className={styles.Input} type='text' name='subject' />
+      </label>
+      <label className={styles.Label}>
+        Message*
+        <textarea
+          className={styles.Input}
+          required
+          name='message'
+          id='message'
+        />
+      </label>
+      <input className={styles.Input} type='submit' value='SEND' />
     </form>
   );
 };

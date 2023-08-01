@@ -18,6 +18,7 @@ $xl-desktop: get-breakpoint('xl-desktop');
   --gray-100-color: #121212;
   --blue-10-color: #999dff;
   --blue-20-color: #7376c3;
+  --blue-30-color: #4d4f7e;
   --purple-10-color: #e1b2f0;
   --purple-20-color: #ebacff;
   --purple-30-color: #b585c5;
@@ -69,6 +70,9 @@ $xl-desktop: get-breakpoint('xl-desktop');
   --sphere-primary-color: var(--blue-10-color);
   --sphere-secondary-color: var(--purple-20-color);
   --tooltip-color: var(--blue-10-color);
+  --button-primary-color: var(--blue-10-color);
+  --button-text-color: var(--gray-10-color);
+  --border-color: var(--gray-30-color);
 }
 
 /* DARK COLOR TOKENS */
@@ -86,6 +90,9 @@ $xl-desktop: get-breakpoint('xl-desktop');
   --sphere-primary-color: var(--blue-20-color);
   --sphere-secondary-color: var(--purple-30-color);
   --tooltip-color: var(--blue-20-color);
+  --button-primary-color: var(--blue-30-color);
+  --button-text-color: var(--gray-40-color);
+  --border-color: var(--gray-80-color);
 }
 
 .App {
