@@ -1,44 +1,90 @@
-import { useRef } from "react";
+import { useRef, useEffect } from "react";
 
 import { useFrame } from "@react-three/fiber";
 import { Mesh } from "three";
 
+import * as dat from "lil-gui";
+
 // import colors from "../../styles/color-variables.module.scss";
 
 const Sphere = (props: any) => {
-  const ref = useRef<Mesh>(null!);
+  const sphere1ref = useRef<Mesh>(null!);
   const sphere2ref = useRef<Mesh>(null!);
 
-  // const [hovered, hover] = useState(false);
-  // const [clicked, click] = useState(false);
+  /* Debug UI */
+  useEffect(() => {
+    // Sphere-1 tewaks
+    if (document.location.href.includes("debug")) {
+      const gui = new dat.GUI();
 
+      const sphere1Folder = gui.addFolder("Sphere-1 Folder");
+      const sphere2Folder = gui.addFolder("Sphere-2 Folder");
+
+      sphere1Folder
+        .addColor(sphere1ref.current.material, "color")
+        .name("sphere-1-color");
+      sphere1Folder
+        .add(sphere1ref.current.material, "roughness", 0, 1, 0.0001)
+        .name("roughness-sphere-1");
+      sphere1Folder
+        .add(sphere1ref.current.material, "metalness", 0, 1, 0.0001)
+        .name("metalness-sphere-1");
+
+      // Sphere-2 tewaks
+      sphere2Folder
+        .addColor(sphere2ref.current.material, "color")
+        .name("sphere-2-color");
+      sphere2Folder
+        .add(sphere2ref.current.material, "roughness", 0, 1, 0.0001)
+        .name("roughness-sphere-2");
+      sphere2Folder
+        .add(sphere2ref.current.material, "metalness", 0, 1, 0.0001)
+        .name("metalness-sphere-2");
+    }
+  }, []);
+
+  /* Animate objects */
   useFrame((state, delta) => {
     const time = state.clock.getElapsedTime();
 
-    ref.current.position.x = Math.sin(time) * 5;
-    ref.current.position.y = Math.tan(time);
-    ref.current.rotation.x += 0.01;
+    sphere1ref.current.position.x = -4;
+    sphere2ref.current.position.x = 1;
+    sphere1ref.current.position.x = Math.sin(time) * 5;
+    sphere1ref.current.position.y = Math.tan(time);
+    sphere1ref.current.rotation.x = time + 0.05;
+    sphere1ref.current.rotation.y = time + 0.05;
 
     sphere2ref.current.position.x = Math.tan(time);
     sphere2ref.current.position.y = Math.cos(time) * 4;
-    sphere2ref.current.rotation.x += 0.01;
+    sphere2ref.current.rotation.x = time + 0.05;
+    sphere2ref.current.rotation.y = time + 0.05;
   });
 
   return (
     <>
-      <mesh ref={ref}>
-        <sphereGeometry args={[2.5, 32, 32]} />
-        <meshStandardMaterial color='#6063a3' />
+      <mesh ref={sphere1ref}>
+        <sphereGeometry args={[1.5, 24, 24]} />
+        <meshPhysicalMaterial
+          clearcoat={1}
+          clearcoatRoughness={0.45}
+          reflectivity={1}
+          flatShading
+          metalness={0}
+          roughness={0}
+          color='#a8b2ff'
+        />
       </mesh>
-      <mesh
-        ref={sphere2ref}
-        // scale={clicked ? 1.5 : 1}
-        // onClick={(event) => click(!clicked)}
-        // onPointerOver={(event) => hover(true)}
-        // onPointerOut={(event) => hover(false)}
-      >
-        <sphereGeometry args={[2.5, 32, 32]} />
-        <meshStandardMaterial color='#b27ec2' />
+      <mesh ref={sphere2ref}>
+        <sphereGeometry args={[1.5, 24, 32]} />
+        <meshPhysicalMaterial
+          clearcoat={1}
+          clearcoatRoughness={0.45}
+          reflectivity={1}
+          flatShading
+          metalness={0}
+          roughness={0}
+          color='#b27ec2'
+        />
       </mesh>
     </>
   );

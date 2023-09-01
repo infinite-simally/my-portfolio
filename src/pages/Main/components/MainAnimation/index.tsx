@@ -6,9 +6,8 @@ import styles from "./MainAnimation.module.scss";
 const MainAnimation = () => {
   return (
     <ThreeContainer className={styles.CanvasContainer}>
-      <pointLight position={[10, 10, 10]} castShadow />
-      <ambientLight intensity={0.2} />
-      <directionalLight position={[0.5, 0.5, 1]} color='white' />
+      <pointLight position={[0, 5, 3]} intensity={0.55} />
+      <ambientLight intensity={0.45} />
       <Sphere position={[0, 0, 0]} />
     </ThreeContainer>
   );

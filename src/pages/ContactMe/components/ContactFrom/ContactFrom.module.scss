@@ -37,6 +37,7 @@
         }
 
         &:active {
+            outline: 0;
             background: linear-gradient(180deg, var(--button-primary-color) 0%, transparent 230%);
         }
     }

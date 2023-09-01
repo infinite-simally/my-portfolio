@@ -2,8 +2,6 @@ import { CareerIcon, EducationIcon, HobbyIcon, InfoIcon } from "assets/icons";
 
 import Text from "components/Text";
 
-import styles from "./About.module.scss";
-
 type SectionData = {
   title: string;
   description: React.ReactNode;
