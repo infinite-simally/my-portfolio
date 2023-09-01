@@ -29,6 +29,9 @@ const Sphere = (props: any) => {
       sphere1Folder
         .add(sphere1ref.current.material, "metalness", 0, 1, 0.0001)
         .name("metalness-sphere-1");
+      sphere1Folder
+        .addColor(sphere1ref.current.material, "emissive")
+        .name("emissive-sphere-1");
 
       // Sphere-2 tewaks
       sphere2Folder
@@ -40,15 +43,18 @@ const Sphere = (props: any) => {
       sphere2Folder
         .add(sphere2ref.current.material, "metalness", 0, 1, 0.0001)
         .name("metalness-sphere-2");
+      sphere2Folder
+        .addColor(sphere2ref.current.material, "emissive")
+        .name("emissive-sphere-2");
     }
-  }, []);
+  }, [sphere1ref, sphere2ref]);
 
   /* Animate objects */
   useFrame((state, delta) => {
     const time = state.clock.getElapsedTime();
 
-    sphere1ref.current.position.x = -4;
-    sphere2ref.current.position.x = 1;
+    // sphere1ref.current.position.x = -4;
+    // sphere2ref.current.position.x = 1;
     sphere1ref.current.position.x = Math.sin(time) * 5;
     sphere1ref.current.position.y = Math.tan(time);
     sphere1ref.current.rotation.x = time + 0.05;
