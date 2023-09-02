@@ -15,11 +15,11 @@
     "moduleResolution": "node",
     "jsx": "react-jsx",
     "baseUrl": "./src",
-    "typeRoots": ["./node_modules/@types/", "./node_modules", "./src/global"],
-    "paths": {
-      "components/*": ["components/*"],
-      "styles/*": ["styles/*"]
-    }
+    "typeRoots": ["./node_modules", "./src/global"]
+    // "paths": {
+    //   "components/*": ["components/*"],
+    //   "styles/*": ["styles/*"]
+    // }
   },
   "include": ["*.d.ts", "src"],
   "exclude": ["node_modules"]
