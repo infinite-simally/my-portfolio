@@ -2,7 +2,7 @@
   "compilerOptions": {
     "target": "ESNext",
     "lib": ["dom", "dom.iterable", "esnext"],
-    "types": ["vite/client", "vite-plugin-svgr/client", "three"],
+    "types": ["vite/client", "vite-plugin-svgr/client"],
     "allowJs": false,
     "esModuleInterop": false,
     "allowSyntheticDefaultImports": true,
@@ -15,7 +15,7 @@
     "moduleResolution": "node",
     "jsx": "react-jsx",
     "baseUrl": "./src",
-    "typeRoots": ["./node_modules", "./src/global"]
+    "typeRoots": ["./node_modules", "three", "./src/global"]
     // "paths": {
     //   "components/*": ["components/*"],
     //   "styles/*": ["styles/*"]
