@@ -1,5 +1,5 @@
 import { Canvas } from "@react-three/fiber";
-import Sphere from "./Spheres/Spheres";
+import Spheres from "./Spheres/Spheres";
 
 import styles from "./MainAnimation.module.scss";
 
@@ -13,7 +13,7 @@ const MainAnimation = () => {
       >
         <pointLight position={[0, 5, 3]} intensity={0.55} />
         <ambientLight intensity={0.45} color='#fff' />
-        <Sphere position={[0, 0, 0]} />
+        <Spheres position={[0, 0, 0]} />
       </Canvas>
     </div>
   );

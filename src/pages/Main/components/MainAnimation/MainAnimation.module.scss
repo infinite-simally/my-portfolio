@@ -1,8 +1,6 @@
 .CanvasContainer {
     position: absolute;
     width: calc(100vw - var(--large-padding) * 2);
-    height: calc(100vh - var(--large-padding) * 2);
+    height: calc(100vh - var(--large-padding));
     margin: 0 auto;
-    // opacity: 0.45;
-    // filter: blur(4px);
 }

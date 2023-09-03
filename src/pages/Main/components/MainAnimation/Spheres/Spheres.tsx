@@ -4,10 +4,11 @@ import { useFrame } from "@react-three/fiber";
 import { Mesh } from "three";
 
 import * as dat from "lil-gui";
+import { Props } from "./Sphere.types";
 
 // import colors from "../../styles/color-variables.module.scss";
 
-const Sphere = (props: any) => {
+const Spheres = (props: Props) => {
   const sphere1ref = useRef<Mesh>(null!);
   const sphere2ref = useRef<Mesh>(null!);
 
@@ -96,4 +97,4 @@ const Sphere = (props: any) => {
   );
 };
 
-export default Sphere;
+export default Spheres;

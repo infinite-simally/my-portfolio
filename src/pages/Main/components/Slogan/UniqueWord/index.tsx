@@ -14,8 +14,11 @@ const UniqueWord = () => {
 
   const [hovered, setIsHovered] = useState(false);
 
-  const panelDivs = [...Array(panelDivsLength)].map(() => (
-    <div className={clsx(styles.Panel, hovered && styles.Panel___hovered)} />
+  const panelDivs = [...Array(panelDivsLength)].map((el, index) => (
+    <div
+      key={index}
+      className={clsx(styles.Panel, hovered && styles.Panel___hovered)}
+    />
   ));
   return (
     <div className={styles.Container}>
